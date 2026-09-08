@@ -1,9 +1,0 @@
-state = "Ground";
-slot = 0;
-speed = 0;
-image_speed = 0;
-gravity_direction = 270;
-gravity = 0.25;
-hit = false;
-hold_grenade = "Ready";
-reload_state = "Ready";

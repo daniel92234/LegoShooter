@@ -1,0 +1,13 @@
+event_inherited();
+gun = o_gun_A_4;
+range = 380;
+bullet_x_real[0] = 49;
+bullet_y_real[0] = -10;
+bullet_x_real[1] = 49;
+bullet_y_real[1] = -6;
+bullet_x_real[2] = 49;
+bullet_y_real[2] = -2;
+flash_x_real = 48;
+flash_y_real = -6;
+fire_rate = random_range(90, 135);
+arm_angle_movement_offset = 3.5;

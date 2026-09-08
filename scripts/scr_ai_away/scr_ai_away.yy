@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_ai_away",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_ai_away",
+  "parent":{
+    "name":"enemy_ai",
+    "path":"folders/Scripts/enemy_ai.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

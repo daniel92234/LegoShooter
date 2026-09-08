@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_remove_bullet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_remove_bullet",
+  "parent":{
+    "name":"gun_scripts",
+    "path":"folders/Scripts/gun_scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

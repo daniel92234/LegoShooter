@@ -1,2 +1,0 @@
-hold_grenade = "Ready";
-

@@ -1,0 +1,25 @@
+function scr_ai_end_step() {
+	//making sure that the arm is pointing in the same direction that we're looking
+	with my_arm{
+	    x = other.x; 
+	    y = other.y;
+	}
+	with my_other_arm{
+	    x = other.x; 
+	    y = other.y;
+	}
+
+	if instance_exists(o_player){
+	    if o_player.x < x and !collision_line(x, y, o_player.x, o_player.y, o_blockP, false, true){
+	        image_xscale = -1;
+	        head_angle = point_direction(x, y - 7, o_player.x, o_player.y) - 180;
+	    }
+	    else if o_player.x > x and !collision_line(x, y, o_player.x, o_player.y, o_blockP, false, true){
+	        image_xscale = 1;
+	        head_angle = point_direction(x, y - 7, o_player.x, o_player.y);
+	    }
+	}
+
+
+
+}

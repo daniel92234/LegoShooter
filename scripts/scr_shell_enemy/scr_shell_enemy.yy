@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_shell_enemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_shell_enemy",
+  "parent":{
+    "name":"arm",
+    "path":"folders/Scripts/enemy_ai/arm.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,2 +1,0 @@
-sprite_index=s_heart_blink
-
