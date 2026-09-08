@@ -1,0 +1,2 @@
+hold_grenade = "Ready";
+

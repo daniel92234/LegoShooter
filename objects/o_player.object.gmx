@@ -30,7 +30,7 @@ gun_1 = choose(o_gun_1, o_gun_3)
 gun_2 = choose(o_gun_2, o_gun_7)
 //global variables
 global.health_max = 100; //health. 6 hits to die.
-global.health = global.health_max;
+health = global.health_max;
 global.shield = 50;
 global.facing = 1; //facing left or right
 global.dir3 = 1; //direction of head
@@ -184,7 +184,7 @@ else if global.facing == -1{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.health &lt;= 0{
+            <string>if health &lt;= 0{
     with o_enemyP {
         image_speed = 0;
     }
@@ -1443,7 +1443,7 @@ with gun_slot_2{
         global.shield = 0;
         global.hurt_col = c_red;
         alarm[0] = 5;
-        global.health -= damage - leftover_shield;
+        health -= damage - leftover_shield;
     }
 }
 </string>

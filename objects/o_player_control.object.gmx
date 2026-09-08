@@ -28,7 +28,7 @@
             <string>pickup_gun = noone;
 gun_picked_up = noone;
 weapon_ground = noone;
-global.score = 0;
+score = 0;
 </string>
           </argument>
         </arguments>
@@ -51,7 +51,7 @@ global.score = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.score = 0;
+            <string>score = 0;
 room_restart();
 </string>
           </argument>
@@ -150,12 +150,12 @@ else if instance_exists(o_player){
     else{
         draw_set_color(c_black)
     }
-    draw_text(30,50,global.score);
+    draw_text(30,50,score);
     draw_set_color(c_black);
     draw_text(400,5,level);
     
     //draw health
-    health_bar = (global.health / global.health_max) * 100;
+    health_bar = (health / global.health_max) * 100;
     draw_healthbar(502, 9, 762, 27, health_bar, c_black, c_red, c_green, 0, true, true);
     if o_player.over_shield &gt; 0{
         shield_bar = 100;

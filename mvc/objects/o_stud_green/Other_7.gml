@@ -1,0 +1,2 @@
+if sprite_index=s_stud_green_blink {instance_destroy()}
+

@@ -98,7 +98,7 @@ exit;
 } else if (state = 1) {
     mask_index = blank;
     if distance_to_point(view_xview+5,view_yview+50) &lt; 10 {
-    global.score += 50;
+    score += 50;
     instance_destroy();
     } else if distance_to_point(view_xview+5,view_yview+50) &gt;= 10 {
     spd += 0.2;

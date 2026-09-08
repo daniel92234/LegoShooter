@@ -1,0 +1,2 @@
+sprite_index=s_stud_silver_blink
+

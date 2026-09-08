@@ -1,0 +1,2 @@
+other.speed = 0;
+
