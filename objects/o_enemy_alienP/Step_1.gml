@@ -1,6 +1,6 @@
 //if we are out of health, destroy and create lots of LEGO pieces, like in LEGO Star Wars.
 if (hp <= 0) {
-effect_create_above(ef_smokeup,x,y,1,c_lime);
+effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup,x,y,1,c_lime);
 //normally I wouldn't write code in a horizontal list, but this time it's all similar code.
 with instance_create_layer(x,y,"Game_Objects",o_bit) {sprite_index = other.head_sprite; hspeed = -4+random(8); vspeed = -4-random(2); direction = random(360)}
 with instance_create_layer(x,y,"Game_Objects",o_bit) {sprite_index = asset_get_index("s_enemy_arm_" + other.enemy_type); hspeed = -4+random(8); vspeed = -4-random(2); direction = random(360)}

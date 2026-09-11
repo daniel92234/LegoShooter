@@ -33,7 +33,7 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
                 player = "Player";
             }
         }
-        effect_create_above(ef_smokeup,bullet_x_offset,bullet_y_offset,0,c_ltgray);
+        effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup,bullet_x_offset,bullet_y_offset,0,c_ltgray);
         reload_state = "Rest";
         image_speed = 0.35;
         alarm[1] = 30;

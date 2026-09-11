@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"869666f3-4459-4e1c-821a-b85734a7544f","name":"869666f3-4459-4e1c-821a-b85734a7544f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"35ff22b1-e3b2-4907-afed-0d8869824e5e","name":"35ff22b1-e3b2-4907-afed-0d8869824e5e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"f889f611-2ba9-4116-a2a6-71a4523c3068","name":"f889f611-2ba9-4116-a2a6-71a4523c3068","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"7b8463f9-55fe-4ba5-977f-84d0036a8cbc","name":"7b8463f9-55fe-4ba5-977f-84d0036a8cbc","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"v1","%Name":"1b11d627-fd15-44dc-85f8-9ae5f78e31d0","name":"1b11d627-fd15-44dc-85f8-9ae5f78e31d0","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
@@ -83,8 +83,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"869666f3-4459-4e1c-821a-b85734a7544f","path":"sprites/s_exp/s_exp.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3314f990-7618-4589-bf18-344b0fa9696a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"35ff22b1-e3b2-4907-afed-0d8869824e5e","path":"sprites/s_exp/s_exp.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e0311e84-dae3-4686-9f71-9bd238bc71ae","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f889f611-2ba9-4116-a2a6-71a4523c3068","path":"sprites/s_exp/s_exp.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"70c1011b-0bbf-44b0-9a0d-82d7d13c8ada","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},

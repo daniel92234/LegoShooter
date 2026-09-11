@@ -1,3 +1,3 @@
 /// @description  Smoke Effect
-effect_create_above(ef_smokeup,x,y,0,make_colour_rgb(255, 30, 30))
+effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup,x,y,0,make_colour_rgb(255, 30, 30))
 

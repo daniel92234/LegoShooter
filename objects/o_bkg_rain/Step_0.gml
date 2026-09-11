@@ -5,7 +5,7 @@ if (create_droplet == true){
 
     var droplet_x = random_range(_left, _right);
 
-    instance_create_layer(droplet_x, -20, "Instances", o_droplet);
+    instance_create_layer(droplet_x, -20, "Game_Objects", o_droplet);
 
     alarm[0] = 1;
     create_droplet = false;

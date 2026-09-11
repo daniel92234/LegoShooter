@@ -1,7 +1,7 @@
 if (hp <= max_hp / 2){
     amount = hp / (max_hp / 2);
     color = merge_colour(make_colour_rgb(10, 10, 10), make_colour_rgb(150, 150, 150), amount);
-    effect_create_above(ef_smokeup, x, y, 0.5, color);
+    effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup, x, y, 0.5, color);
 }
 //if we are out of health, destroy and create lots of LEGO pieces, like in LEGO Star Wars.
 if (hp <= 0) {

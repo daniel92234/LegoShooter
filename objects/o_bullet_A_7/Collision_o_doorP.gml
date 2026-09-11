@@ -1,6 +1,6 @@
 if other.opened == false{
     if bounces > 0{
-        move_bounce_all(false);
+        move_bounce_solid(false);
     bounces -= 1;
     }
     else

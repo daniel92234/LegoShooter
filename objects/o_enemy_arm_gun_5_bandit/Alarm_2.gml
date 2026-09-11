@@ -27,7 +27,7 @@ if instance_exists(o_player){
             player = "Enemy";
         }
     }
-    effect_create_above(ef_smokeup,bullet_x_offset,bullet_y_offset,0,c_ltgray);
+    effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup,bullet_x_offset,bullet_y_offset,0,c_ltgray);
     image_speed = 0.35;
     alarm[3] = 30;
 }

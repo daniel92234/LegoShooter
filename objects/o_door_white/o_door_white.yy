@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"s_door_white",
     "path":"sprites/s_door_white/s_door_white.yy",
