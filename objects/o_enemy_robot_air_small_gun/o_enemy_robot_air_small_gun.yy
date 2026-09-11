@@ -35,6 +35,19 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"max_hp","filters":[],"listItems":[],"multiselect":false,"name":"max_hp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"15","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"range_min","filters":[],"listItems":[],"multiselect":false,"name":"range_min","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"50","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"range_max","filters":[],"listItems":[],"multiselect":false,"name":"range_max","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"475","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"shoot_angle_offset","filters":[],"listItems":[],"multiselect":false,"name":"shoot_angle_offset","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"path","filters":[
+        "GMPath",
+      ],"listItems":[],"multiselect":false,"name":"path","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"action","filters":[],"listItems":[
+        "path_action_stop",
+        "path_action_restart",
+        "path_action_continue",
+        "path_action_reverse",
+      ],"multiselect":false,"name":"action","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"path_action_stop","varType":6,},
+    {"$GMObjectProperty":"v2","%Name":"face_player","filters":[],"listItems":[],"multiselect":false,"name":"face_player","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

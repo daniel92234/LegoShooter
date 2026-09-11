@@ -1,7 +1,7 @@
 if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grenade == "Rest"){
 //shooting
     if reload_state == "Ready" and ammo > 0{
-        flash = instance_create(flash_x_offset, flash_y_offset,o_flash);
+        flash = instance_create_layer(flash_x_offset,flash_y_offset,"Game_Objects",o_flash);
         with flash{
             sprite_index = s_flash_A_4;
             image_speed = 0.4;
@@ -15,7 +15,7 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
             owner = other.id
         }
 		for (var i = 0; i < array_length(bullet_x_real); i++) {
-	        with instance_create(bullet_x_offset[i], bullet_y_offset[i], o_bullet_A_4){
+	        with instance_create_layer(bullet_x_offset[i], bullet_y_offset[i], "Game_Objects", o_bullet_A_4){
 	            speed = 20;
 	            direction = other.image_angle;
 	            image_angle = direction;

@@ -4,7 +4,7 @@ if state == "Ground" or state == "Inactive"{
 else if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grenade == "Rest"){
 //shooting
     if reload_state == "Ready" and ammo > 0{
-        bullet = instance_create(bullet_x_offset, bullet_y_offset, o_bullet_7);
+        bullet = instance_create_layer(bullet_x_offset,bullet_y_offset,"Game_Objects",o_bullet_7);
         with bullet{
             speed = 15;
             direction = other.image_angle + random_range(-1.3, 1.3);

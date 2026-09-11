@@ -1,6 +1,6 @@
 //setting variables
 event_inherited();
-fire_rate = 50 + random(20);
+fire_rate = 60 + random(60);
 hp = max_hp;
 my_head = instance_create_layer(x, y - 12, "Game_Objects", o_enemy_robot_stationary_head_gun);
 with my_head {

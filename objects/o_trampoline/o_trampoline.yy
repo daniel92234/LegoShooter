@@ -10,8 +10,8 @@
   "name":"o_trampoline",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ground",
+    "path":"folders/Objects/ground.yy",
   },
   "parentObjectId":null,
   "persistent":false,

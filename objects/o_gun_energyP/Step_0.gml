@@ -7,7 +7,7 @@ if ammo == 0 and sprite_index == gun_spr{
 }
 if state == "Ground"{
 	if ammo == 0{
-	    with instance_create_layer(x, y, "Game_Objects", o_bit){
+	    with instance_create_layer(x,y,"Game_Objects",o_bit){
 	        sprite_index = other.ground_spr;
 	    }
 	instance_destroy();

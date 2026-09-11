@@ -8,8 +8,8 @@
   "name":"o_left",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"directions",
+    "path":"folders/Objects/directions.yy",
   },
   "parentObjectId":null,
   "persistent":false,

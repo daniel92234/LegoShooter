@@ -23,7 +23,7 @@
   ],
   "name":"bkg_city_night",
   "nineSlice":null,
-  "origin":0,
+  "origin":3,
   "parent":{
     "name":"backgrounds",
     "path":"folders/Sprites/backgrounds.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":0,
+    "yorigin":800,
   },
   "swatchColours":null,
   "swfPrecision":2.525,

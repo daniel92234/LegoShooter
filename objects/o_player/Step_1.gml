@@ -6,35 +6,35 @@ if global.hp <= 0{
     with my_head{
         instance_destroy();
     }
-    with instance_create_layer(x, y, "Game_Objects", o_bit){
+    with instance_create_layer(x,y,"Game_Objects",o_bit){
         sprite_index = s_head_dead; 
         hspeed = -4 + random(8); 
         vspeed = -4 - random(2); 
         direction = random(360)
     }
-    with instance_create_layer(x, y, "Game_Objects", o_bit){
+    with instance_create_layer(x,y,"Game_Objects",o_bit){
         sprite_index = s_arm_hand; hspeed = -4 + random(8); vspeed = -4 - random(2); direction = random(360)
     }
-    with instance_create_layer(x, y, "Game_Objects", o_bit){
+    with instance_create_layer(x,y,"Game_Objects",o_bit){
         sprite_index = s_arm_hand; hspeed = -4 + random(8); vspeed = -4 - random(2); direction = random(360)
     }
-    with instance_create_layer(x, y, "Game_Objects", o_bit){
+    with instance_create_layer(x,y,"Game_Objects",o_bit){
         sprite_index = s_leg; hspeed = -4 + random(8); vspeed = -4 - random(2); direction = random(360)
     }
-    with instance_create_layer(x, y, "Game_Objects", o_bit){
+    with instance_create_layer(x,y,"Game_Objects",o_bit){
         sprite_index = s_leg; hspeed = -4 + random(8); vspeed = -4 - random(2); direction = random(360)
     }
-    with instance_create_layer(x, y, "Game_Objects", o_bit){
+    with instance_create_layer(x,y,"Game_Objects",o_bit){
         sprite_index = s_belt; hspeed = -4 + random(8); vspeed = -4 - random(2); direction = random(360)
     }
-    with instance_create_layer(x, y, "Game_Objects", o_bit){
+    with instance_create_layer(x,y,"Game_Objects",o_bit){
         sprite_index = s_torso; hspeed = -4 + random(8); vspeed = -4 - random(2); direction = random(360)
     }
     if place_meeting(x,y,o_deadly_expP){
-        with instance_create_layer(x, y, "Game_Objects", o_bit){
+        with instance_create_layer(x,y,"Game_Objects",o_bit){
             sprite_index = other.gun_slot_1.ground_spr;
         }
-        with instance_create_layer(x, y, "Game_Objects", o_bit){
+        with instance_create_layer(x,y,"Game_Objects",o_bit){
             sprite_index = other.gun_slot_2.ground_spr;
         }
         with gun_slot_1{

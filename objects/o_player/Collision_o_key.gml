@@ -1,7 +1,7 @@
-if global.key == "No"{
+if global.key == false{
     with other{
         instance_destroy();
     }
-    global.key = "Yes";
+    global.key = true;
 }
 

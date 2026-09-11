@@ -11,8 +11,8 @@
   "name":"o_barrier_edge",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ground",
+    "path":"folders/Objects/ground.yy",
   },
   "parentObjectId":null,
   "persistent":false,

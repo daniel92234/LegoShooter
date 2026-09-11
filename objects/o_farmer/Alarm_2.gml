@@ -1,4 +1,4 @@
-if room == level_1_1{
+if room == level_template{
     room_goto(level_1_2)
 }
 if room == level_1_2{

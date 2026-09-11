@@ -5,7 +5,7 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
 			alarm[0] = -1
 			sprite = gun_spr
 		}
-        flash = instance_create(flash_x_offset, flash_y_offset,o_flash);
+        flash = instance_create_layer(flash_x_offset,flash_y_offset,"Game_Objects",o_flash);
         with flash{
             sprite_index = s_flash_5;
             image_speed = 0.4;
@@ -19,7 +19,7 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
             owner = other.id
         }
         repeat(6){
-            bullet = instance_create(bullet_x_offset, bullet_y_offset, o_bullet_5);
+            bullet = instance_create_layer(bullet_x_offset,bullet_y_offset,"Game_Objects",o_bullet_5);
             with bullet{
                 speed = 20;
                 direction = other.image_angle + random_range(-4, 4);

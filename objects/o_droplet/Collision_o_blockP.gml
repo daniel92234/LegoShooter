@@ -1,3 +1,3 @@
-instance_create(x, y + 9, o_drip);
+instance_create_layer(x, y + 9, "Game_Objects", o_drip);
 instance_destroy();
 

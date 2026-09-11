@@ -1,4 +1,4 @@
-image_angle = direction;
+event_inherited();
 gravity_direction = 270;
 if !place_meeting(x, y, o_water){
 gravity = global.world_gravity; 

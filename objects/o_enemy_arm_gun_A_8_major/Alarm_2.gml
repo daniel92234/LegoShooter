@@ -1,5 +1,5 @@
 if instance_exists(o_player){
-    bullet = instance_create(bullet_x_offset, bullet_y_offset, o_bullet_A_8);
+    bullet = instance_create_layer(bullet_x_offset,bullet_y_offset,"Game_Objects",o_bullet_A_8);
         with bullet{
             direction = other.image_angle;
             image_angle = direction;

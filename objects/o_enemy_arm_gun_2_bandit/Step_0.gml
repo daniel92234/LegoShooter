@@ -4,7 +4,7 @@ if instance_exists(o_player){
     if !(collision_line(x,y,o_player.x,o_player.y,o_blockP,0,1)) 
     and distance_to_object(o_player) < range
     and can_fire == true and can_shoot == true{
-        bullet = instance_create(bullet_x_offset, bullet_y_offset, o_bullet_2);
+        bullet = instance_create_layer(bullet_x_offset,bullet_y_offset,"Game_Objects",o_bullet_2);
         with bullet{
             speed = 13;
             direction = other.image_angle + random_range(-2.6, 2.6);

@@ -6,8 +6,8 @@
   "name":"o_conveyor_belt_s",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ground",
+    "path":"folders/Objects/ground.yy",
   },
   "parentObjectId":{
     "name":"o_conveyor_beltP",

@@ -23,16 +23,6 @@ if instance_exists(o_player){
         }
         player = "Enemy";
     }
-    if instance_exists(o_bkg_lighting_night){
-        light = instance_create(bullet_x_offset, bullet_y_offset, o_light);
-        with light{
-            image_alpha = 0.4;
-            image_blend = make_colour_rgb(50, 255, 50);
-            image_xscale = 0.25;
-            image_yscale = 0.25;
-        }
-        bullet.light_id = light.id;
-    }
     image_speed = 1;
 }
 

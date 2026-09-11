@@ -8,8 +8,8 @@
   "name":"o_up",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"directions",
+    "path":"folders/Objects/directions.yy",
   },
   "parentObjectId":null,
   "persistent":false,

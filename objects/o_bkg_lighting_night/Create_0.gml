@@ -1,2 +1,0 @@
-global.surf = -1;
-

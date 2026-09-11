@@ -2,7 +2,7 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
 	//shooting
     if reload_state == "Ready" and ammo > 0{
 		for (var i = 0; i < array_length(bullet_x_real); i++) {
-	        with instance_create(bullet_x_offset[i], bullet_y_offset[i], o_bullet_1){
+	        with instance_create_layer(bullet_x_offset[i], bullet_y_offset[i], "Game_Objects", o_bullet_1){
 	            speed = 15;
 	            direction = other.image_angle;
 	            image_angle = direction;

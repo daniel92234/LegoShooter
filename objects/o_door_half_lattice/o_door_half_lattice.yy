@@ -8,8 +8,8 @@
   "name":"o_door_half_lattice",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ground",
+    "path":"folders/Objects/ground.yy",
   },
   "parentObjectId":{
     "name":"o_doorP",

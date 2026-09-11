@@ -1,7 +1,7 @@
 function scr_clip(argument0, argument1, argument2) {
 	x_clip = x + lengthdir_x(argument0, image_angle) - lengthdir_y(argument1 * sign(image_yscale), image_angle);
 	y_clip = y + lengthdir_y(argument0, image_angle) + lengthdir_x(argument1 * sign(image_yscale), image_angle);
-	with instance_create_layer(x_clip, y_clip, "Game_Objects", o_bit){
+	with instance_create_layer(x_clip, y_clip, "Game_Objects",o_bit){
 	    depth = layer_get_depth("Game_Objects") + DEPTH_OFFSET_GUN_CILPS;
 	    sprite_index = argument2;
 	    image_speed = 0;

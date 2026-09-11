@@ -1,11 +1,4 @@
-image_angle = direction;
-if instance_exists(o_bkg_lighting_night){
-    light_id.x = x;
-    light_id.y = y;
-    light_id.speed = speed;
-    light_id.direction = direction;
-    light_id.image_angle = image_angle;
-}
+event_inherited();
 if player == "Player"{
     if instance_exists(e) and (distance_to_object(e) < 200) and !collision_line(x, y, e.x, e.y, o_blockP, false, true){
         target = e;

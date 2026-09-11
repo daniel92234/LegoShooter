@@ -1,15 +1,10 @@
 //setting variables
-player = "Enemy";
-max_hp = 18;
+event_inherited();
+fire_rate = 90;
 hp = max_hp;
-image_speed = 0;
 inView = false;
 start_path = false;
-view_player = true;
-use_path = false;
-rotate_with_direction = false;
 can_bomb = false;
 bomb_x = 0;
-bomb_y = 12;
-alarm[0] = 38;
-
+bomb_y = 16;
+alarm[0] = fire_rate;

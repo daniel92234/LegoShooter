@@ -17,7 +17,7 @@ else{
     door_is_opened = true;
 }
 
-    if (distance_to_object(o_player) < 600 and distance_to_object(o_player) > 50) //so if we're guarding a person, we will shoot from farther away
+    if (distance_to_object(o_player) <= range_max and distance_to_object(o_player) >= range_min)
     and !(collision_line(x,y,o_player.x,o_player.y,o_blockP,0,1)) and can_shoot == true and door_is_opened == true{
     alarm[0] = fire_rate;
     alarm[1] = fire_rate;

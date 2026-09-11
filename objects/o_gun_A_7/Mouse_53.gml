@@ -30,16 +30,6 @@ else if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_
             }
             player = "Player";
         }
-        if instance_exists(o_bkg_lighting_night){
-            light = instance_create(bullet_x_offset, bullet_y_offset, o_light);
-            with light{
-                image_alpha = 0.4;
-                image_blend = make_colour_rgb(155, 0, 255);
-                image_xscale = 0.2;
-                image_yscale = 0.125;
-            }
-            bullet.light_id = light.id;
-        }
         reload_state = "Rest";
         alarm[2] = 17;
         image_speed = 1;

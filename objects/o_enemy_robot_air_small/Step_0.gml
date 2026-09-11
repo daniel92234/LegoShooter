@@ -1,17 +1,12 @@
-if use_path == false{
-    exit;
-}
-
 var _cam = view_camera[0];
-var _vx = camera_get_view_x(_cam);
-var _vy = camera_get_view_y(_cam);
-var _vw = camera_get_view_width(_cam);
-var _vh = camera_get_view_height(_cam);
-if (point_in_rectangle(x, y, _vx - 40, _vy - 40, _vx + _vw + 40, _vy + _vh + 40)){
+var _left = camera_get_view_x(_cam) - 40;
+var _up = camera_get_view_y(_cam) - 40;
+var _right = _left + camera_get_view_width(_cam) + 40;
+var _down = _up + camera_get_view_height(_cam) + 40;
+if (point_in_rectangle(x, y, _left, _up, _right, _down)){
     inView = true;
 }
-if inView == true and start_path == false{
+if start_path == false and inView == true and path != noone{
     path_start(path, 2, action, true);
     start_path = true;
 }
-

@@ -1,12 +1,12 @@
-bomb_x_offset = x + lengthdir_x(bomb_x, direction) - lengthdir_y(bomb_y * sign(image_xscale), direction);
-bomb_y_offset = y + lengthdir_y(bomb_x, direction) + lengthdir_x(bomb_y * sign(image_xscale), direction);
+bomb_x_offset = x + lengthdir_x(bomb_x, image_angle) - lengthdir_y(bomb_y * sign(image_xscale), image_angle);
+bomb_y_offset = y + lengthdir_y(bomb_x, image_angle) + lengthdir_x(bomb_y * sign(image_yscale), image_angle);
 
 var _cam = view_camera[0];
-var _vx = camera_get_view_x(_cam);
-var _vy = camera_get_view_y(_cam);
-var _vw = camera_get_view_width(_cam);
-var _vh = camera_get_view_height(_cam);
-if (point_in_rectangle(x, y, _vx - 40, _vy - 40, _vx + _vw + 40, _vy + _vh + 40)){
+var _left = camera_get_view_x(_cam) - 40;
+var _up = camera_get_view_y(_cam) - 40;
+var _right = _left + camera_get_view_width(_cam) + 40;
+var _down = _up + camera_get_view_height(_cam) + 40;
+if (point_in_rectangle(x, y, _left, _up, _right, _down)){
     inView = true;
 }
 if inView == true{
@@ -18,7 +18,7 @@ if inView == true{
         }
         can_bomb = false;
     }
-    if start_path == false and use_path == true{
+    if start_path == false and path != noone{
         path_start(path, 2, action, true);
         start_path = true;
     }

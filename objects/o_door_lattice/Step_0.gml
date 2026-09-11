@@ -1,6 +1,6 @@
-if distance_to_object(instance_nearest(x, y, o_player)) < 15 and locked == true and global.key == "Yes"{
+if distance_to_object(instance_nearest(x, y, o_player)) < 15 and locked == true and global.key == true{
     locked = false;
-    global.key = "No";
+    global.key = false;
 }
 if opened == true{
     image_index = 1;

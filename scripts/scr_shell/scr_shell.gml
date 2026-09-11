@@ -1,7 +1,7 @@
 function scr_shell(argument0, argument1, argument2, argument3) {
 	x_shell = x + lengthdir_x(argument0, image_angle) - lengthdir_y(argument1 * sign(image_yscale), image_angle);
 	y_shell = y + lengthdir_y(argument0, image_angle) + lengthdir_x(argument1 * sign(image_yscale), image_angle);
-	with instance_create_layer(x_shell, y_shell, "Game_Objects", o_bit){
+	with instance_create_layer(x_shell, y_shell, "Game_Objects",o_bit){
 	    depth = layer_get_depth("Game_Objects") + DEPTH_OFFSET_GUN_CASINGS;
 	    sprite_index = argument2;
 	    image_speed = 0;

@@ -34,7 +34,20 @@
   "physicsShape":0,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v2","%Name":"max_hp","filters":[],"listItems":[],"multiselect":false,"name":"max_hp","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"18","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"path","filters":[
+        "GMPath",
+      ],"listItems":[],"multiselect":false,"name":"path","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"action","filters":[],"listItems":[
+        "path_action_stop",
+        "path_action_restart",
+        "path_action_continue",
+        "path_action_reverse",
+      ],"multiselect":false,"name":"action","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"path_action_stop","varType":6,},
+    {"$GMObjectProperty":"v2","%Name":"face_player","filters":[],"listItems":[],"multiselect":false,"name":"face_player","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"rotate_with_direction","filters":[],"listItems":[],"multiselect":false,"name":"rotate_with_direction","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

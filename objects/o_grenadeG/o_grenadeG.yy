@@ -15,8 +15,8 @@
   "name":"o_grenadeG",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"grenades",
+    "path":"folders/Objects/items/grenades.yy",
   },
   "parentObjectId":null,
   "persistent":false,
