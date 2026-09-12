@@ -13,8 +13,3 @@ else if instance_exists(o_player){
         }
     }
 }
-
-if room == level_template{
-    level = "1-1";
-}
-

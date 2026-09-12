@@ -1,6 +1,6 @@
 if damage > 0{
     repeat(2){
-        with instance_create_layer(hit.x, hit.y, "Game_Obejcts", o_bit){
+        with instance_create_layer(hit.x, hit.y, "Game_Objects", o_bit){
             sprite_index = s_glass_part
             image_index = 1;
             image_speed = 0;

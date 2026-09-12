@@ -6,7 +6,7 @@ else if (hp <= 4) and (hp >= 1){
 }
 else if (hp <= 0){
     repeat(4+random(2)){
-        with instance_create_layer(x, y, "Game_Obejcts", o_bit){
+        with instance_create_layer(x, y, "Game_Objects", o_bit){
             sprite_index = s_glass_part
             image_index = choose(0, 1);
             image_speed = 0;

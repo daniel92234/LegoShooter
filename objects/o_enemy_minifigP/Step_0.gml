@@ -1,16 +1,37 @@
 //move around
 if instance_exists(o_player){
 	if equip2 == "None" or equip2 == "Shield"{
+		var _walking = false
 	    if guard == false and alert == true{
-	        if distance_to_object(o_player) > walk_away_range + 3 and distance_to_object(o_player) < view_range{
-	            scr_ai_move(asset_get_index("s_enemy_run_" + enemy_type));
+	        if distance_to_object(o_player) > walk_away_range + 5 and distance_to_object(o_player) < view_range{
+				_walking = true
+	            scr_ai_move();
 	        }
-	        else if distance_to_object(o_player) < walk_away_range - 3{
-	            scr_ai_away(asset_get_index("s_enemy_run_" + enemy_type));
+	        else if distance_to_object(o_player) < walk_away_range - 5{
+				_walking = true
+	            scr_ai_away();
 	        }
-	        else if distance_to_object(o_player) > walk_away_range + 3 and distance_to_object(o_player) < walk_away_range - 3{
+	        else{
 	            hspeed = 0;
 	            sprite_index = asset_get_index("s_enemy_stand_" + enemy_type);
+				if can_swim == true and distance_to_object(o_player) >= walk_away_range - 5 and distance_to_object(o_player) <= walk_away_range + 5{
+					if o_player.y < y - 3 or
+					(collision_line(x, y, x, y + 150, o_hazardP, false, true) or
+					!collision_line(x, y, x, y + 500, o_blockP, false, true)){
+						vspeed -= jump_power / 2;
+			            alarm[1] = 25;
+			            can_swim = false;
+					}
+		        }
+				else{
+					if can_swim == true and
+					(collision_line(x, y, x, y + 150, o_hazardP, false, true) or
+					!collision_line(x, y, x, y + 500, o_blockP, false, true)){
+						vspeed -= jump_power / 2;
+			            alarm[1] = 25;
+			            can_swim = false;
+					}
+				}
 	        }
 	    }
 	    if vspeed > 12 {
@@ -24,7 +45,7 @@ if instance_exists(o_player){
 	            hspeed += 0.5
 	        }
 	    }
-	    else if place_meeting(x, y, o_water){
+	    else{
 	        if hspeed > 0{
 	            hspeed -= 1.5
 	        }
@@ -44,7 +65,13 @@ if instance_exists(o_player){
 	        sprite_index = asset_get_index("s_enemy_jump_" + enemy_type);
 	    }
 	    else{
-	        gravity = 0; 
+	        gravity = 0;
+			if !_walking{
+				sprite_index = asset_get_index("s_enemy_stand_" + enemy_type);
+			}
+			else{
+				sprite_index = asset_get_index("s_enemy_run_" + enemy_type)
+			}
 	    }
 	    if alert == false{
 	        hspeed = 0; 
@@ -53,7 +80,7 @@ if instance_exists(o_player){
 	        sprite_index = asset_get_index("s_enemy_stand_" + enemy_type);
 	    }
 	    with my_arm{
-	        x = other.x; 
+	        x = other.x;
 	        y = other.y;
 	    }
 	    with my_other_arm{
