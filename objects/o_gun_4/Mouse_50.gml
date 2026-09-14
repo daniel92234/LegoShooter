@@ -12,7 +12,8 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
             else if global.facing == -1{
                 image_yscale = -1;
             }
-            owner = other.id
+            owner = other.id;
+			light = true;
         }
         bullet = instance_create_layer(bullet_x_offset,bullet_y_offset,"Game_Objects",o_bullet_4);
         with bullet{

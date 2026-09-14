@@ -1,3 +1,6 @@
 /// @description  Smoke Effect
-effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup,x,y,0,c_white);
-
+with instance_create_layer(x,y,"Game_Objects",o_bullet_impact) {
+	particles = p_bullet_impact_1;
+	color = make_colour_rgb(255,255,255);
+	light = true;
+}

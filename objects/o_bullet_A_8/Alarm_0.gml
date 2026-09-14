@@ -1,4 +1,4 @@
-var _range = 590;
+var _range = 600;
 var xx, yy;
 var first_instance;
 xx = x + lengthdir_x(_range, direction);
@@ -58,3 +58,10 @@ if first_instance != noone{
     }
 }
 image_xscale = point_distance(x, y, cx, cy);
+
+with instance_create_layer(x,y,"Game_Objects",o_A_8_laser){
+	image_xscale = other.image_xscale
+	image_angle = other.image_angle
+}
+
+alarm[1] = 1;

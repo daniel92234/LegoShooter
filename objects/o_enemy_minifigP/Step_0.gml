@@ -14,22 +14,23 @@ if instance_exists(o_player){
 	        else{
 	            hspeed = 0;
 	            sprite_index = asset_get_index("s_enemy_stand_" + enemy_type);
-				if can_swim == true and distance_to_object(o_player) >= walk_away_range - 5 and distance_to_object(o_player) <= walk_away_range + 5{
-					if o_player.y < y - 3 or
-					(collision_line(x, y, x, y + 150, o_hazardP, false, true) or
-					!collision_line(x, y, x, y + 500, o_blockP, false, true)){
-						vspeed -= jump_power / 2;
-			            alarm[1] = 25;
-			            can_swim = false;
-					}
-		        }
-				else{
-					if can_swim == true and
-					(collision_line(x, y, x, y + 150, o_hazardP, false, true) or
-					!collision_line(x, y, x, y + 500, o_blockP, false, true)){
-						vspeed -= jump_power / 2;
-			            alarm[1] = 25;
-			            can_swim = false;
+				if can_swim == true and place_meeting(x, y, o_water){
+					if distance_to_object(o_player) >= walk_away_range - 5 and distance_to_object(o_player) <= walk_away_range + 5{
+						if o_player.y < y - 3 or
+						(collision_line(x, y, x, y + 150, o_hazardP, false, true) or
+						!collision_line(x, y, x, y + 500, o_blockP, false, true)){
+							vspeed -= jump_power / 2;
+				            alarm[1] = 25;
+				            can_swim = false;
+						}
+			        }
+					else{
+						if collision_line(x, y, x, y + 150, o_hazardP, false, true) or
+						!collision_line(x, y, x, y + 500, o_blockP, false, true){
+							vspeed -= jump_power / 2;
+				            alarm[1] = 25;
+				            can_swim = false;
+						}
 					}
 				}
 	        }

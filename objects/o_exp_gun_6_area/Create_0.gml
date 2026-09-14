@@ -8,6 +8,13 @@ with instance_create_layer(x,y,"Game_Objects",o_exp){
     image_yscale = other.explosion_scale;
     image_blend = other.color_blend;
 }
+if instance_exists(o_bkg_lighting){
+	with instance_create_layer(x,y,"Game_Objects",o_light_overlay_fade) {
+		image_xscale = other.explosion_scale * 1.5;
+		image_yscale = other.explosion_scale * 1.5;
+		image_blend = other.color_blend;
+	}
+}
 outer_damage_min = 20;
 outer_damage_max = 40;
 outer_knockback_min = 4;

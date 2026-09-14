@@ -4,7 +4,7 @@ if other.solid == true{
         scr_hit_check_bullet();
     }
     if bounces > 0{
-        move_bounce_all(false);
+        move_bounce_solid(false);
         bounces -= 1;
     }
     else if bounces == 0{
@@ -12,6 +12,7 @@ if other.solid == true{
         speed = 0;
         event_user(0);
         event_user(1);
+		event_user(2);
         instance_destroy();
     }
 }

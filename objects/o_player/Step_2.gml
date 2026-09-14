@@ -22,4 +22,3 @@ if global.facing == 1{
 else if global.facing == -1{
     image_xscale = -1
 }
-
