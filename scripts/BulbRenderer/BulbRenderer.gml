@@ -376,7 +376,7 @@ function BulbRenderer(_camera) constructor
                 ++_i;
             }
             
-            var _i = hdrBloomIterations-1;
+            _i = hdrBloomIterations-1;
             repeat(hdrBloomIterations-1)
             {
                 surface_set_target(_bloomSurfaceArray[_i-1]);

@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":575,
   "bbox_left":0,
-  "bbox_right":799,
+  "bbox_right":1279,
   "bbox_top":13,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"b9835e6b-d81b-46cc-91d3-f1d495bc20c6","name":"b9835e6b-d81b-46cc-91d3-f1d495bc20c6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"914214be-467b-49ec-a3d8-17016594052e","name":"914214be-467b-49ec-a3d8-17016594052e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":576,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"15362bdd-8c82-4806-b0a3-76ecaa19816c","blendMode":0,"displayName":"default","isLocked":false,"name":"15362bdd-8c82-4806-b0a3-76ecaa19816c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"39ba1174-89f8-47e6-a90b-625ff7937962","blendMode":0,"displayName":"default","isLocked":false,"name":"39ba1174-89f8-47e6-a90b-625ff7937962","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"bricks",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b9835e6b-d81b-46cc-91d3-f1d495bc20c6","path":"sprites/bricks/bricks.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f686388c-0a2a-4492-9aa2-45bff74c70cf","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"914214be-467b-49ec-a3d8-17016594052e","path":"sprites/bricks/bricks.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4e81c3f3-16fa-47fd-b6a0-5ecfdfe2c2c9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":800,
+  "width":1280,
 }

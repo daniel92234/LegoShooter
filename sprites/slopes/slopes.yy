@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":255,
   "bbox_left":0,
-  "bbox_right":191,
+  "bbox_right":319,
   "bbox_top":13,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"be833cab-21af-4e0e-b09a-0ae377eeb00b","name":"be833cab-21af-4e0e-b09a-0ae377eeb00b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"6636357e-e006-4b3e-896f-3e65a64b1577","name":"6636357e-e006-4b3e-896f-3e65a64b1577","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":256,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"a4c75f20-e5a7-46b5-a586-b00522fb3d71","blendMode":0,"displayName":"default","isLocked":false,"name":"a4c75f20-e5a7-46b5-a586-b00522fb3d71","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c179f54c-f4ba-46df-acc4-b7b21f674285","blendMode":0,"displayName":"default","isLocked":false,"name":"c179f54c-f4ba-46df-acc4-b7b21f674285","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"slopes",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"be833cab-21af-4e0e-b09a-0ae377eeb00b","path":"sprites/slopes/slopes.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5a208dc0-fbd9-44f4-bdc5-cdc074a58c82","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6636357e-e006-4b3e-896f-3e65a64b1577","path":"sprites/slopes/slopes.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d18438ca-a023-4073-a1e1-134f9aec8d43","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":192,
+  "width":320,
 }

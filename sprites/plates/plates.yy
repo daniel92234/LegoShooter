@@ -2,7 +2,7 @@
   "$GMSprite":"v2",
   "%Name":"plates",
   "bboxMode":0,
-  "bbox_bottom":95,
+  "bbox_bottom":191,
   "bbox_left":0,
   "bbox_right":639,
   "bbox_top":8,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"c1f6bdc2-6706-44e3-8dcc-12d765d4e4b5","name":"c1f6bdc2-6706-44e3-8dcc-12d765d4e4b5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"c1003f4d-86a0-44e5-bd06-9b295a7d78b9","name":"c1003f4d-86a0-44e5-bd06-9b295a7d78b9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":96,
+  "height":192,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"8a97f781-1efb-46f3-9449-da1d515147c9","blendMode":0,"displayName":"default","isLocked":false,"name":"8a97f781-1efb-46f3-9449-da1d515147c9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"e83a2d46-5b98-4c75-aafb-5207ca5fa48c","blendMode":0,"displayName":"default","isLocked":false,"name":"e83a2d46-5b98-4c75-aafb-5207ca5fa48c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"plates",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1f6bdc2-6706-44e3-8dcc-12d765d4e4b5","path":"sprites/plates/plates.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a3d66bb4-328f-45c5-90e9-e779f2aa7585","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c1003f4d-86a0-44e5-bd06-9b295a7d78b9","path":"sprites/plates/plates.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2bb97dcd-5ab1-4a50-9af9-becd6e6e7b1a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

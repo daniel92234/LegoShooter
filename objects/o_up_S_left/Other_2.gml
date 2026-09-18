@@ -10,8 +10,7 @@ if instance_exists(o_bkg_lighting){
 	var _right = bbox_right - x;
 	var _bottom = bbox_bottom - y;
 
-	occluder.AddEdge(_left, _top, _right, _top);
-	occluder.AddEdge(_right, _top, _right, _bottom);
+	occluder.AddEdge(_left, _top, _right, _bottom);
 	occluder.AddEdge(_right, _bottom, _left, _bottom);
 	occluder.AddEdge(_left, _bottom, _left, _top);
 }

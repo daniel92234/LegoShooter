@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":575,
   "bbox_left":0,
-  "bbox_right":799,
+  "bbox_right":1279,
   "bbox_top":13,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"a0139a86-b747-4dc4-85fe-deff65007a47","name":"a0139a86-b747-4dc4-85fe-deff65007a47","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"ebab3776-62ec-4d37-a0dd-92a188a461cb","name":"ebab3776-62ec-4d37-a0dd-92a188a461cb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":576,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"86896064-a645-49a6-baf1-9cf492eeec02","blendMode":0,"displayName":"default","isLocked":false,"name":"86896064-a645-49a6-baf1-9cf492eeec02","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f494a315-518e-4ca1-a3a6-f8e187c8ca25","blendMode":0,"displayName":"default","isLocked":false,"name":"f494a315-518e-4ca1-a3a6-f8e187c8ca25","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"bricks_inside",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a0139a86-b747-4dc4-85fe-deff65007a47","path":"sprites/bricks_inside/bricks_inside.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"75e4142d-9e3e-4157-9550-8ab28af349f6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ebab3776-62ec-4d37-a0dd-92a188a461cb","path":"sprites/bricks_inside/bricks_inside.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"81d2f2cc-0da3-49b1-b233-e864f6b1a01e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":800,
+  "width":1280,
 }

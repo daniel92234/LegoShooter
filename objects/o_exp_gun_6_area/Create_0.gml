@@ -16,15 +16,15 @@ if instance_exists(o_bkg_lighting){
 	}
 }
 outer_damage_min = 20;
-outer_damage_max = 40;
+outer_damage_max = 30;
 outer_knockback_min = 4;
 outer_knockback_max = 5;
-middle_damage_min = 41;
-middle_damage_max = 57;
+middle_damage_min = 31;
+middle_damage_max = 45;
 middle_knockback_min = 5;
 middle_knockback_max = 7;
-inner_damage_min = 58;
-inner_damage_max = 80;
+inner_damage_min = 46;
+inner_damage_max = 60;
 inner_knockback_min = 8;
 inner_knockback_max = 10.3;
 
