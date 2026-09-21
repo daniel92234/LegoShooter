@@ -1,4 +1,4 @@
-if global.hp <= 0{
+if hp <= 0{
     with o_enemyP {
         image_speed = 0;
     }

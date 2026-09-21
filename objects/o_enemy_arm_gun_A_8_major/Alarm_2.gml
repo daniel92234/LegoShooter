@@ -9,10 +9,10 @@ if instance_exists(o_player){
             cx = x;
             cy = y;
             alpha = 0.8;
-            if global.facing == 1{
+            if o_player.facing == 1{
                 image_yscale = 1;
             }
-            else if global.facing == -1{
+            else if o_player.facing == -1{
                 image_yscale = -1;
             }
             player = "Enemy";

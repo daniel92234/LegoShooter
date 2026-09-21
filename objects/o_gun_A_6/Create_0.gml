@@ -4,7 +4,7 @@ ammo = ammo_max;
 gun_spr = s_arm_gun_A_6;
 ground_spr = s_gun_A_6;
 
-clip_size = 0;
+fire_rate = 40;
 gun_name = "Type-6 Tracing Plasma Launcher";
 gun_shortname = "Plasma Launcher";
 

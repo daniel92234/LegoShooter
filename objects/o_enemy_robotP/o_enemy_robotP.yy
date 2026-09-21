@@ -3,6 +3,8 @@
   "%Name":"o_enemy_robotP",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"o_deadly_expP","path":"objects/o_deadly_expP/o_deadly_expP.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"o_enemy_robotP",

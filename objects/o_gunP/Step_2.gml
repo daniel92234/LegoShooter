@@ -10,10 +10,10 @@ if state == "Active"{
 	if hit == false{
 	    image_angle = point_direction(x, y, mouse_x, mouse_y);
 	}
-	if global.facing == 1 {
+	if o_player.facing == 1 {
 	    image_yscale = 1;
 	}
-	else if global.facing == -1 {
+	else if o_player.facing == -1 {
 	    image_yscale = -1;
 	}
 }

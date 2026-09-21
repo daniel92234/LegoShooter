@@ -8,6 +8,7 @@ ground_spr = s_gun_3;
 clip_spr = s_clip_3;
 
 clip_size = 8;
+fire_rate = 7;
 reload_speed = 75;
 gun_name = "P-21 Personal Combat Pistol";
 gun_shortname = "Pistol";

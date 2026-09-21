@@ -6,16 +6,16 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
             speed = 18;
             direction = other.image_angle + random_range(-2.6, 2.6);
             image_angle = direction;
-            if global.facing == 1{
+            if o_player.facing == 1{
                 image_yscale = 1;
             }
-            else if global.facing == -1{
+            else if o_player.facing == -1{
                 image_yscale = -1;
             }
             player = "Player";
         }
         reload_state = "Rest";
-        alarm[2] = 5;
+        alarm[2] = fire_rate;
         image_speed = 1;
         ammo -= 1;
         scr_shell(20, -4, s_shell_1, random_range(4, 6));

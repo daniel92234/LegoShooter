@@ -15,10 +15,10 @@ else if state == "Active" and (reload_state == "Ready" or reload_state == "Reloa
 	image_speed = 0;
 	image_index = 0;
 	old_angle = image_angle;
-	if global.facing == 1{
+	if o_player.facing == 1{
 	    image_angle = old_angle + 25;
 	}
-	else if global.facing == -1{
+	else if o_player.facing == -1{
 	    image_angle = old_angle - 25;
 	}
 	hit = true;

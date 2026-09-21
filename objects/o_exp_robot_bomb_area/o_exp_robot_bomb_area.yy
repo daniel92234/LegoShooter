@@ -37,5 +37,5 @@
     "path":"sprites/s_exp_area/s_exp_area.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

@@ -1,3 +1,3 @@
-global.hp = 0;
-global.shield = 0;
+hp = 0;
+shield = 0;
 

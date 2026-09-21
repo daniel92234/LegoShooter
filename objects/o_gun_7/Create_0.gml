@@ -1,6 +1,6 @@
 event_inherited();
 ammo = 30;
-total_ammo = 60;
+total_ammo = 90;
 ammo_max = 180;
 gun_spr = s_arm_gun_7;
 gun_spr_reload = s_arm_gun_7_reload;
@@ -8,6 +8,7 @@ ground_spr = s_gun_7;
 clip_spr = s_clip_2;
 
 clip_size = 30;
+fire_rate = 5;
 reload_speed = 120;
 gun_name = "Suppressed M-1 Submachine Gun";
 gun_shortname = "Submachine Gun";

@@ -1,7 +1,7 @@
 /// @description  Variables affected by power-ups
 walk_speed = 4 + walk_speed_mod;
 jump_power = 7 + jump_power_mod;
-global.shield_max = 50 + over_shield;
+shield_max = 50 + over_shield;
 if walk_ticker > 0{
     walk_ticker -= 1;
 }
@@ -226,23 +226,23 @@ if crouching == false{
 }
 
 /// Shield Recharge
-if add_shield_point == true and global.shield < global.shield_max{
+if add_shield_point == true and shield < shield_max{
     if over_shield > 0{
-        global.shield -= 1;
+        shield -= 1;
     }
     else{
-        global.shield += 1;
+        shield += 1;
     }
     alarm[1] = 25;
     add_shield_point = false;
 }
-if over_shield > 0 and global.shield <= 50{
+if over_shield > 0 and shield <= 50{
     over_shield = 0;
 }
-if global.shield > global.shield_max{
-    global.shield = global.shield_max;
+if shield > shield_max{
+    shield = shield_max;
 }
-if global.shield < 0{
-    global.shield = 0;
+if shield < 0{
+    shield = 0;
 }
 

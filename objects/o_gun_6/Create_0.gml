@@ -8,6 +8,7 @@ ground_spr = s_gun_6;
 clip_spr = s_clip_6;
 
 clip_size = 1;
+fire_rate = 125;
 reload_speed = 125;
 gun_name = "R-2 StS Assault Rocket Launcher";
 gun_shortname = "Rocket Launcher";

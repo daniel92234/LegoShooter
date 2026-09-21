@@ -15,16 +15,8 @@ if instance_exists(o_bkg_lighting){
 		image_blend = other.color_blend;
 	}
 }
-outer_damage_min = 18;
-outer_damage_max = 30;
-outer_knockback_min = 4;
-outer_knockback_max = 5;
-middle_damage_min = 31;
-middle_damage_max = 54;
-middle_knockback_min = 5;
-middle_knockback_max = 6.8;
-inner_damage_min = 55;
-inner_damage_max = 73;
-inner_knockback_min = 7;
-inner_knockback_max = 9;
-
+damage_min = 30
+damage_max = 65
+random_factor = 0.06
+knockback_min = 3
+knockback_max = 7.2

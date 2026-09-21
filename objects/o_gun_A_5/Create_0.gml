@@ -4,7 +4,7 @@ ammo = ammo_max;
 gun_spr = s_arm_gun_A_5;
 ground_spr = s_gun_A_5;
 
-clip_size = 0;
+fire_rate = 105;
 gun_name = "Type-5 High-Explosive Plasma Launcher";
 gun_shortname = "Plasma Launcher";
 

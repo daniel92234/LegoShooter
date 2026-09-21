@@ -8,6 +8,7 @@ ground_spr = s_gun_9;
 clip_spr = s_clip_9;
 
 clip_size = 1;
+fire_rate = 85;
 reload_speed = 85;
 gun_name = "M-5B Bouncing Grenade Launcher";
 gun_shortname = "Grenade Launcher";

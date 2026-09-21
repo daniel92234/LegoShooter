@@ -8,6 +8,7 @@ ground_spr = s_gun_1;
 clip_spr = s_clip_1;
 
 clip_size = 15;
+fire_rate = 3;
 reload_speed = 95;
 gun_name = "P-1 Ricksmith Dual-Shoot Pistol";
 gun_shortname = "Pistol";

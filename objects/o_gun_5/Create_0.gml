@@ -8,6 +8,7 @@ ground_spr = s_gun_5;
 clip_spr = s_clip_5;
 
 clip_size = 5;
+fire_rate = 40;
 reload_speed_per_ammo = 24;
 gun_name = "MS-6 Tactical Shotgun";
 gun_shortname = "Shotgun";

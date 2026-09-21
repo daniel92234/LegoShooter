@@ -9,17 +9,17 @@ else if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_
             speed = 12;
             direction = other.image_angle;
             image_angle = direction;
-            if global.facing == 1{
+            if o_player.facing == 1{
                 image_yscale = 1;
             }
-            else if global.facing == -1{
+            else if o_player.facing == -1{
                 image_yscale = -1;
             }
             player = "Player";
         }
         reload_state = "Rest";
         image_speed = 1;
-        alarm[2] = 24;
+        alarm[2] = fire_rate;
         ammo -= 1;
     }
     else if reload_state == "Out" and total_ammo > 0{

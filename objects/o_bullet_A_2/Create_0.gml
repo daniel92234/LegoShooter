@@ -1,5 +1,5 @@
 event_inherited();
-damage = irandom_range(4, 8);
+damage = irandom_range(damage_min, damage_max);
 
 if instance_exists(o_bkg_lighting){
 	my_light = instance_create_layer(x,y,"Game_Objects",o_light_overlay);

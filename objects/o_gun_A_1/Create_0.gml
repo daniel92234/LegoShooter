@@ -4,7 +4,7 @@ ammo = ammo_max;
 gun_spr = s_arm_gun_A_1;
 ground_spr = s_gun_A_1;
 
-clip_size = 0;
+fire_rate = 9;
 gun_name = "Type-1 Energy Pistol";
 gun_shortname = "Plasma Pistol";
 

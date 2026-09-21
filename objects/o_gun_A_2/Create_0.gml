@@ -4,7 +4,7 @@ ammo = ammo_max;
 gun_spr = s_arm_gun_A_2;
 ground_spr = s_gun_A_2;
 
-clip_size = 0;
+fire_rate = 8;
 gun_name = "Type-2 Energy Chaingun";
 gun_shortname = "Chaingun";
 

@@ -4,7 +4,7 @@ ammo = ammo_max;
 gun_spr = s_arm_gun_A_7;
 ground_spr = s_gun_A_7;
 
-clip_size = 0;
+fire_rate = 20;
 gun_name = "Type-7 Bouncing Plasma Rifle";
 gun_shortname = "Plasma Rifle";
 

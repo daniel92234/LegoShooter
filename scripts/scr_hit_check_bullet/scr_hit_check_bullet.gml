@@ -1,20 +1,13 @@
-function scr_hit_check_bullet(_check_only = false) {
-    var _can_hit = player != hit.player or player == "Neutral";
-    if _check_only{
-        return _can_hit;
+function scr_hit_check_bullet(argument0 = false) {
+    var can_hit = player != hit.player or player == "Neutral";
+    if argument0{
+        return can_hit;
     }
-    if _can_hit{
-        if instance_exists(o_player){
-            if hit.player == "Player"{
-                damage = hit.damage * o_player.damage_multiplier;
-            }
-            else{
-                damage = hit.damage;
-            }
-        }
-        else{
-            damage = hit.damage;
-        }
+    if can_hit{
+		damage = hit.damage
+        if other.player == "Player" and instance_exists(o_player){
+	        damage *= o_player.damage_multiplier;
+	    }
         event_user(0);
         return true;
     }

@@ -1,7 +1,7 @@
-if global.hp < global.hp_max - 30{
-    global.hp += 30;
+if hp < hp_max - 30{
+    hp += 30;
 }
-else if global.hp >= global.hp_max - 30{
-    global.hp = global.hp_max;
+else if hp >= hp_max - 30{
+    hp = hp_max;
 }
 

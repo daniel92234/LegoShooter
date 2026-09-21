@@ -1,3 +1,3 @@
 event_inherited();
-damage = irandom_range(2, 6);
+damage = irandom_range(damage_min, damage_max);
 

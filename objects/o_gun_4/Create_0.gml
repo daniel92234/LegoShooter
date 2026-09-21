@@ -8,6 +8,7 @@ ground_spr = s_gun_4;
 clip_spr = s_clip_4;
 
 clip_size = 15;
+fire_rate = 10;
 reload_speed = 130;
 gun_name = "PG-100 Brick-Tech Plasma Rifle";
 gun_shortname = "Plasma Rifle";

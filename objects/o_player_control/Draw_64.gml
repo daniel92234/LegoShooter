@@ -11,15 +11,15 @@ if instance_exists(o_player) {
     draw_text(400,5,string_hash_to_newline(level));
     
     //draw health
-    health_bar = (global.hp / global.hp_max) * 100;
+    health_bar = (o_player.hp / o_player.hp_max) * 100;
     draw_healthbar(502, 9, 762, 27, health_bar, c_black, c_red, c_green, 0, true, true);
     if o_player.over_shield > 0{
         shield_bar = 100;
-        over_shield_remain = global.shield - 50;
+        over_shield_remain = shield - 50;
         over_shield_bar = (over_shield_remain / o_player.over_shield) * 100;
     }
     else{
-        shield_bar = (global.shield / global.shield_max) * 100;
+        shield_bar = (o_player.shield / o_player.shield_max) * 100;
     }
     if o_player.over_shield > 0{
         draw_healthbar(502, 21, 762, 27, shield_bar, c_black, c_red, c_blue, 0, false, true);
@@ -31,7 +31,7 @@ if instance_exists(o_player) {
     
     //draw grenades and key (if we have one)
     draw_sprite(s_grenadeF,0,220,16)
-    draw_text(230,5,string_hash_to_newline(global.grenades))
+    draw_text(230,5,string_hash_to_newline(o_player.grenades))
     if global.key = true {
         draw_sprite(s_key,0,190,16)
     }
@@ -90,9 +90,6 @@ if instance_exists(o_player) {
             draw_set_color(c_black);
         }
     }
-}
-
-if instance_exists(o_player) {    
     if (o_player.slot = 1) {
         if object_get_parent(weapon1.object_index) == o_gun_energyP{
             if (weapon1.ammo > 0) { 
@@ -166,9 +163,6 @@ if instance_exists(o_player) {
             }
         }
     }
-}
-
-if instance_exists(o_player) {    
     if (weapon1.slot = 1) { //slot 0
         if (weapon1.state = "Active") { //primary weapon
         draw_sprite_ext(weapon1.ground_spr,0,300,16,1,1,0,image_blend,1);

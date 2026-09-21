@@ -4,7 +4,7 @@ ammo = ammo_max;
 gun_spr = s_arm_gun_A_4;
 ground_spr = s_gun_A_4;
 
-clip_size = 0;
+fire_rate = 18;
 gun_name = "Type-4 3-Shooter Laser Pistol";
 gun_shortname = "Laser Pistol";
 

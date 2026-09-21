@@ -6,10 +6,10 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
             sprite_index = s_flash_6;
             image_speed = 0.3;
             image_angle = other.image_angle;
-            if global.facing == 1{
+            if o_player.facing == 1{
                 image_yscale = 1;
             }
-            else if global.facing == -1{
+            else if o_player.facing == -1{
                 image_yscale = -1;
             }
             owner = other.id
@@ -19,16 +19,16 @@ if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grena
             speed = 25;
             direction = other.image_angle;
             image_angle = direction;
-            if global.facing == -1{
+            if o_player.facing == -1{
                 image_yscale = -1;
             }
-            else if global.facing == 1{
+            else if o_player.facing == 1{
                 image_yscale = 1;
             }
             player = "Player";
         }
         reload_state = "Rest"
-        alarm[2] = 10;
+        alarm[2] = fire_rate;
         image_speed = 1;
         ammo -= 1;
     }

@@ -11,8 +11,8 @@
   "name":"o_head",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"don't place",
+    "path":"folders/Objects/don't place.yy",
   },
   "parentObjectId":null,
   "persistent":false,

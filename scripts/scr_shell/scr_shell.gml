@@ -5,12 +5,12 @@ function scr_shell(argument0, argument1, argument2, argument3) {
 	    depth = layer_get_depth("Game_Objects") + DEPTH_OFFSET_GUN_CASINGS;
 	    sprite_index = argument2;
 	    image_speed = 0;
-	    if global.facing == 1{
+	    if o_player.facing == 1{
 	        image_angle = other.image_angle;
 	        motion_add(other.image_angle + 90 * other.image_xscale, argument3);
 	    //motion_add(other.image_angle,other.speed);
 	    }
-	    else if global.facing == -1{
+	    else if o_player.facing == -1{
 	        image_angle = other.image_angle;
 	        motion_add(other.image_angle - 90 * other.image_xscale, argument3);
 	    //motion_add(other.image_angle,other.speed);

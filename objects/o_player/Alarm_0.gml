@@ -1,2 +1,1 @@
-global.hurt_col = c_white;
-
+hurt_col = c_white;

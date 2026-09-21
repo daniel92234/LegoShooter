@@ -8,6 +8,7 @@ ground_spr = s_gun_8;
 clip_spr = s_clip_8;
 
 clip_size = 3;
+fire_rate = 25;
 reload_speed = 75;
 gun_name = "M-4 Grenade Launcher";
 gun_shortname = "Grenade Launcher";
