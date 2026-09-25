@@ -3,8 +3,8 @@
   "%Name":"hangers",
   "bboxMode":0,
   "bbox_bottom":63,
-  "bbox_left":2,
-  "bbox_right":125,
+  "bbox_left":66,
+  "bbox_right":189,
   "bbox_top":29,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":128,
+  "width":192,
 }

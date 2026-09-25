@@ -1,3 +1,3 @@
-global.grenades += 1;
+other.grenades += 1;
 instance_destroy();
 

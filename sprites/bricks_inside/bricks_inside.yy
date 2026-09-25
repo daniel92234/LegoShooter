@@ -3,8 +3,8 @@
   "%Name":"bricks_inside",
   "bboxMode":0,
   "bbox_bottom":575,
-  "bbox_left":0,
-  "bbox_right":1279,
+  "bbox_left":16,
+  "bbox_right":1295,
   "bbox_top":13,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":1280,
+  "width":1296,
 }

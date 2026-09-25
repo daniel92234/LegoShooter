@@ -1,4 +1,6 @@
-if state == "Active" and hit == false and (hold_grenade == "Ready" or hold_grenade == "Rest"){
+if state == "Active" and hit == false and
+(hold_grenade == "Ready" or hold_grenade == "Rest") and 
+collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,o_hitP,false,true).solid == false{
 	//shooting
     if reload_state == "Ready" and ammo > 0{
 		for (var i = 0; i < array_length(bullet_x_real); i++) {

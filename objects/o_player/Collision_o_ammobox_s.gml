@@ -1,5 +1,3 @@
-var lost = 0
-var change = 0
 if slot == 1{
     if object_get_parent(gun_slot_1.object_index) == o_gun_energyP or gun_slot_1.total_ammo >= gun_slot_1.ammo_max{
         exit;

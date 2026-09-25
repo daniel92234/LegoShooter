@@ -22,6 +22,12 @@ gun_slot_2 = noone; //gun in our pocket
 gun_ground = noone; //the gun on the ground
 slot = 1; //which gun we are holding (gun_slot_1 or gun_slot_2)
 add_shield_point = true
+can_hit = true
+
+lost = 0
+change = 0
+state = "Air"
+in_water = false
 
 with instance_create_layer(x,y,"Game_Objects", gun_1){ //create gun in our hands
     o_player.gun_slot_1 = id;

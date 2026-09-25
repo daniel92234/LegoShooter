@@ -1,7 +1,4 @@
-if state == "Ground" or state == "Inactive" {
-	exit;
-}
-else if state == "Active" and (reload_state == "Ready" or reload_state == "Reloading" or reload_state == "Out") and hit == false and (hold_grenade == "Rest" or hold_grenade == "Ready"){
+if state == "Active" and (reload_state == "Ready" or reload_state == "Reloading" or reload_state == "Out") and hit == false and (hold_grenade == "Rest" or hold_grenade == "Ready"){
 	if reload_state == "Reloading" and object_get_parent(self.object_index) != o_gun_energyP{
 	    alarm[0] = -1;
 	    if ammo == 0{
@@ -15,11 +12,13 @@ else if state == "Active" and (reload_state == "Ready" or reload_state == "Reloa
 	image_speed = 0;
 	image_index = 0;
 	old_angle = image_angle;
-	if o_player.facing == 1{
-	    image_angle = old_angle + 25;
-	}
-	else if o_player.facing == -1{
-	    image_angle = old_angle - 25;
+	if o_player.can_hit{
+		if o_player.facing == 1{
+		    image_angle = old_angle + 25;
+		}
+		else if o_player.facing == -1{
+		    image_angle = old_angle - 25;
+		}
 	}
 	hit = true;
 	alarm[3] = 12;

@@ -3,8 +3,8 @@
   "%Name":"slopes",
   "bboxMode":0,
   "bbox_bottom":255,
-  "bbox_left":0,
-  "bbox_right":319,
+  "bbox_left":16,
+  "bbox_right":335,
   "bbox_top":13,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":320,
+  "width":336,
 }

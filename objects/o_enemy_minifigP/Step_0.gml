@@ -60,7 +60,7 @@ if instance_exists(o_player){
 	            gravity = global.world_gravity;
 	        }
 	        else if place_meeting(x, y, o_water){
-	            gravity = global.world_gravity * (2 / 5);
+	            gravity = global.world_gravity * global.water_gravity_multiplier;
 	        }
 	        gravity_direction = 270; 
 	        sprite_index = asset_get_index("s_enemy_jump_" + enemy_type);
@@ -90,28 +90,18 @@ if instance_exists(o_player){
 	    }
 	}
 	if equip2 == "Jetpack"{
-	    if alert == true{
+	    if alert == true and jetpacking == false{
 	        jetpacking = true;
+			jetpack_y_offset = random_range(-50, 50);
+			jetpack_x_offset = random_range(-300, 300);
 	    }
 	    if jetpacking == true{
+			jetpack_y_offset = (jetpack_y_offset+pi/90) % (2*pi);
+			jetpack_x_offset = (jetpack_x_offset+pi/180) % (2*pi);
 	        sprite_index = asset_get_index("s_enemy_jump_jetpack_" + enemy_type);
 	        gravity = 0
-	        if o_player.my_head.image_yscale = -1{
-	            space = -150;
-	        }
-	        else if o_player.my_head.image_yscale = 1{
-	            space = 150;
-	        }
-	        if instance_nearest(x, y, o_enemy_alienP) or
-			instance_nearest(x, y, o_blockP) or
-			instance_nearest(x, y, o_hazardP){
-	            inst = other.object_index;
-			}
-	        else{
-	            inst = noone;
-	        }
 	        mp_potential_settings(30, 10, 10, true);
-	        mp_potential_step_object(o_player.x + space, o_player.y - 300, 3, inst);
+	        mp_potential_step(o_player.x + 300 * cos(jetpack_x_offset), (o_player.y - 300) + 50 * cos(jetpack_y_offset), 3, false);
 	    }
 	    if jetpacking == false{
 	        if vspeed > 12 {
@@ -123,7 +113,7 @@ if instance_exists(o_player){
 	                gravity = global.world_gravity;
 	            }
 	            else if place_meeting(x, y, o_water){
-	                gravity = global.world_gravity * (2 / 5);
+	                gravity = global.world_gravity * global.water_gravity_multiplier;
 	            }
 	            gravity_direction = 270; 
 	        }

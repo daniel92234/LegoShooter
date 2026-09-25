@@ -421,6 +421,7 @@
     {"id":{"name":"scr_create_enemy_parts","path":"scripts/scr_create_enemy_parts/scr_create_enemy_parts.yy",},},
     {"id":{"name":"scr_create_splinter","path":"scripts/scr_create_splinter/scr_create_splinter.yy",},},
     {"id":{"name":"scr_explosion_damage","path":"scripts/scr_explosion_damage/scr_explosion_damage.yy",},},
+    {"id":{"name":"scr_grenade_launcher_aim","path":"scripts/scr_grenade_launcher_aim/scr_grenade_launcher_aim.yy",},},
     {"id":{"name":"scr_hit_check_bullet","path":"scripts/scr_hit_check_bullet/scr_hit_check_bullet.yy",},},
     {"id":{"name":"scr_remove_bullet","path":"scripts/scr_remove_bullet/scr_remove_bullet.yy",},},
     {"id":{"name":"scr_shell_enemy","path":"scripts/scr_shell_enemy/scr_shell_enemy.yy",},},

@@ -1,7 +1,7 @@
-if (place_meeting(x, y + 9, o_upP) or !place_free(x, y + 2)) and !place_meeting(x, y, o_water){
+if state == "Ground" and !in_water{
     vspeed =- jump_power;
 }
-else if place_meeting(x, y, o_water){
+else if in_water{
     vspeed =- jump_power / 2;
 }
 

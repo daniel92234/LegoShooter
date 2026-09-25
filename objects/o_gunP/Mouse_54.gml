@@ -1,5 +1,7 @@
 //pulling out a grenade
-if state = "Active" and hit == false and hold_grenade == "Ready" and (reload_state == "Ready" or reload_state == "Reloading" or reload_state == "Out"){
+if state = "Active" and hit == false and hold_grenade == "Ready" and
+(reload_state == "Ready" or reload_state == "Reloading" or reload_state == "Out") and
+collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,o_hitP,false,true).solid == false{
 	if o_player.grenades > 0{
 	    sprite_index = s_arm_G1;
 	    image_speed = 0;

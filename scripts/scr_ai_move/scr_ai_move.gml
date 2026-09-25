@@ -37,7 +37,7 @@ function scr_ai_move() {
 	                    image_speed = 0.25;
 	                }
 	            }
-	            else if place_free(x + walk_speed * _facing, y){   //though this seems unneeded, the player sometimes gets stuck if it is not there.
+	            else if place_free(x + walk_speed * _facing, y){ // Movement while not on ground
 	                x += walk_speed * _facing;
 	            }
 	        }
@@ -58,29 +58,30 @@ function scr_ai_move() {
 	        }
 	    }
 	    else{
-	        if place_free(x + walk_speed * (5 / 8) * _facing, y + walk_speed * (5 / 8)){ //down a slope of 1
-	            x += walk_speed * (5 / 8) * _facing;
-	            y += walk_speed * (5 / 8); 
-	            image_speed = 0.125;
+			var water_movement = ceil(walk_speed * global.water_movement_reduction)
+	        if place_free(x + water_movement * _facing, y + water_movement){ //down a slope of 1
+	            x += water_movement * _facing;
+	            y += water_movement; 
+	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y + (walk_speed * (5 / 8)) / 2){ //down a slope of 1/2
-	            x += walk_speed * (5 / 8) * _facing;
-	            y += (walk_speed * (5 / 8)) / 2; 
-	            image_speed = 0.125;
+	        else if place_free(x + water_movement * _facing, y + (water_movement) / 2){ //down a slope of 1/2
+	            x += water_movement * _facing;
+	            y += (water_movement) / 2; 
+	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y){ //forward
-	            x += walk_speed * (5 / 8) * _facing;
-	            image_speed = 0.125;
+	        else if place_free(x + water_movement * _facing, y){ //forward
+	            x += water_movement * _facing;
+	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y - (walk_speed * (5 / 8)) / 2){ //up a slope of 1
-	            x += walk_speed * (5 / 8) * _facing;
-	            y -= (walk_speed * (5 / 8)) / 2; 
-	            image_speed = 0.125;
+	        else if place_free(x + water_movement * _facing, y - (water_movement) / 2){ //up a slope of 1
+	            x += water_movement * _facing;
+	            y -= (water_movement) / 2; 
+	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y - walk_speed * (5 / 8)){ //up a slope of 1/2
-	            x += walk_speed * (5 / 8) * _facing;
-	            y -= walk_speed * (5 / 8);
-	            image_speed = 0.125;
+	        else if place_free(x + water_movement * _facing, y - water_movement){ //up a slope of 1/2
+	            x += water_movement * _facing;
+	            y -= water_movement;
+	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
 	        if can_swim == true{
 	            if o_player.y < y - 3 or

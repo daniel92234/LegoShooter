@@ -14,7 +14,9 @@ function scr_arm_step(argument0, argument1) {
 	        else{
 	            door_is_opened = true;
 	        }
-	        if !collision_line(x, y, o_player.x, o_player.y, o_blockP, false, true) and door_is_opened = true{
+	        if !collision_line(x, y, o_player.x, o_player.y, o_blockP, false, true) and
+			door_is_opened = true and
+			collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,o_hitP,false,true).solid == false{
 	            alarm[2] = 1;
 	            alarm[0] = argument1;
 	            can_shoot = false;

@@ -39,28 +39,28 @@ function scr_ai_away() {
 	        }
 	    }
 	    else {
-	        if place_free(x + walk_speed * (5 / 8) * _facing, y + walk_speed * (5 / 8)){ //down a slope of 1
-	            x += walk_speed * (5 / 8) * _facing;
-	            y += walk_speed * (5 / 8); 
+	        if place_free(x + walk_speed * global.water_movement_reduction * _facing, y + walk_speed * global.water_movement_reduction){ //down a slope of 1
+	            x += walk_speed * global.water_movement_reduction * _facing;
+	            y += walk_speed * global.water_movement_reduction; 
 	            image_speed = 0.125;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y + (walk_speed * (5 / 8)) / 2){ //down a slope of 1/2
-	            x += walk_speed * (5 / 8) * _facing;
-	            y += (walk_speed * (5 / 8)) / 2; 
+	        else if place_free(x + walk_speed * global.water_movement_reduction * _facing, y + (walk_speed * global.water_movement_reduction) / 2){ //down a slope of 1/2
+	            x += walk_speed * global.water_movement_reduction * _facing;
+	            y += (walk_speed * global.water_movement_reduction) / 2; 
 	            image_speed = 0.125;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y){ //forward
-	            x += walk_speed * (5 / 8) * _facing;
+	        else if place_free(x + walk_speed * global.water_movement_reduction * _facing, y){ //forward
+	            x += walk_speed * global.water_movement_reduction * _facing;
 	            image_speed = 0.125;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y - (walk_speed * (5 / 8)) / 2){ //up a slope of 1
-	            x += walk_speed * (5 / 8) * _facing;
-	            y -= (walk_speed * (5 / 8)) / 2; 
+	        else if place_free(x + walk_speed * global.water_movement_reduction * _facing, y - (walk_speed * global.water_movement_reduction) / 2){ //up a slope of 1
+	            x += walk_speed * global.water_movement_reduction * _facing;
+	            y -= (walk_speed * global.water_movement_reduction) / 2; 
 	            image_speed = 0.125;
 	        }
-	        else if place_free(x + walk_speed * (5 / 8) * _facing, y - walk_speed * (5 / 8)){ //up a slope of 1/2
-	            x += walk_speed * (5 / 8) * _facing;
-	            y -= walk_speed * (5 / 8);
+	        else if place_free(x + walk_speed * global.water_movement_reduction * _facing, y - walk_speed * global.water_movement_reduction){ //up a slope of 1/2
+	            x += walk_speed * global.water_movement_reduction * _facing;
+	            y -= walk_speed * global.water_movement_reduction;
 	            image_speed = 0.125;
 	        }
 	        if can_swim == true{

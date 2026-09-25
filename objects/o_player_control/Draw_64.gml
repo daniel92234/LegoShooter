@@ -7,7 +7,11 @@ if instance_exists(o_player) {
     draw_set_color(c_black)
     draw_rectangle(1,1,800-2,40,1)
     draw_sprite(s_stud_silver,1,15,65)
+	if instance_exists(o_bkg_lighting)
+		draw_set_color(c_white)
     draw_text(30,50,string_hash_to_newline(global.game_score));
+	if instance_exists(o_bkg_lighting)
+		draw_set_color(c_black)
     draw_text(400,5,string_hash_to_newline(level));
     
     //draw health
@@ -37,10 +41,16 @@ if instance_exists(o_player) {
     }
     if instance_exists(weapon_ground){
         draw_set_alpha(1);
-        draw_set_color(c_black);
+		if instance_exists(o_bkg_lighting)
+			draw_set_color(c_white);
+		else
+			draw_set_color(c_black);
         draw_text(5,565,string_hash_to_newline("Press E to Pickup: " + string(weapon_ground.gun_shortname)));
         if object_get_parent(weapon_ground.object_index) == o_gun_energyP{
-            draw_set_color(c_green);
+            if instance_exists(o_bkg_lighting)
+				draw_set_color(c_lime);
+			else
+				draw_set_color(c_green);
             draw_text(5,580,string_hash_to_newline(string(weapon_ground.per) + "% Charged"));
         }
         draw_set_alpha(1);
@@ -56,7 +66,10 @@ if instance_exists(o_player) {
             else{
                 draw_set_alpha(dialouge[1]/100);
             }
-            draw_set_color(c_black)
+            if instance_exists(o_bkg_lighting)
+				draw_set_color(c_white);
+			else
+				draw_set_color(c_black);
             if o_player.change == 1{
                 draw_text(48,80,string_hash_to_newline("Picked up " 
                     + string(o_player.change) + " " 
@@ -83,7 +96,8 @@ if instance_exists(o_player) {
             else{
                 draw_set_alpha(dialouge[2]/100);
             }
-            draw_set_color(c_black)
+            if instance_exists(o_bkg_lighting)
+				draw_set_color(c_white);
             draw_text(48,80,string_hash_to_newline("Picked up " 
                 + string(gun_picked_up.gun_name) + "."))
             draw_set_alpha(1);

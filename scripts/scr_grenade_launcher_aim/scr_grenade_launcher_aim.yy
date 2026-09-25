@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_grenade_launcher_aim",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_grenade_launcher_aim",
+  "parent":{
+    "name":"arm",
+    "path":"folders/Scripts/enemy_ai/arm.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

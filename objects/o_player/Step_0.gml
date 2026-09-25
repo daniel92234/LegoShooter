@@ -1,4 +1,4 @@
-/// @description  Variables affected by power-ups
+//Variables affected by power-ups
 walk_speed = 4 + walk_speed_mod;
 jump_power = 7 + jump_power_mod;
 shield_max = 50 + over_shield;
@@ -21,24 +21,33 @@ if damage_ticker == 0{
     damage_multiplier = 1;
 }
 
-//gravity stuff
-gravity_direction = 270;
-if place_free(x, y + 1){
-    if !place_meeting(x, y, o_water){
-        gravity = global.world_gravity; 
-    }
-    else if place_meeting(x, y, o_water){
-        gravity = global.world_gravity * (2 / 5); 
-    }
+in_water = place_meeting(x, y, o_water);
+
+if place_free(x, y + 2){
+	state = "Air"
 }
 else{
-    gravity = 0; 
+	state = "Ground"
 }
+
+//gravity stuff
+if state == "Air"{
+    if !in_water{
+        gravity = global.world_gravity; 
+    }
+    else{
+        gravity = global.world_gravity *  global.water_gravity_multiplier; 
+    }
+}
+else if state == "Ground"{
+    gravity = 0;
+}
+
 //control the falling
 if vspeed > 12{
     vspeed = 12;
 }
-if !place_meeting(x, y, o_water){
+if !in_water{
     if hspeed > 0{
         hspeed -= 0.5
     }
@@ -46,7 +55,7 @@ if !place_meeting(x, y, o_water){
         hspeed += 0.5
     }
 }
-else if place_meeting(x, y, o_water){
+else{
     if hspeed > 0{
         hspeed -= 1.5
     }
@@ -60,13 +69,13 @@ if !place_meeting(x, y, o_gunP){
 if keyboard_check(ord("S")){
     crouching = true;
 }
-else if !keyboard_check(ord("S")){
+else{
     crouching = false;
 }
 if keyboard_check(ord("A")) or keyboard_check(ord("D")){
     walking = true;
 }
-else if !(keyboard_check(ord("A")) and keyboard_check(ord("D"))){
+else {
     walking = false;
 }
 if keyboard_check_pressed(ord("S")){
@@ -86,16 +95,11 @@ if y <= room_height + 42{
 }
 
 // sprite stuff
-if !place_free(x, y + 2){
+if state == "Ground"{
     if walking == true and crouching == false{
         sprite_index = s_player_run;
         mask_index = m_player;
-        if !place_meeting(x, y, o_water){
-            image_speed = 0.3;
-        }
-        else if place_meeting(x, y, o_water){
-            image_speed = 0.15;
-        }
+        image_speed = 0.3 * power(global.water_movement_reduction, in_water);
     }
     else if walking == false and crouching == false{
         sprite_index = s_player_stand;
@@ -115,112 +119,60 @@ else{
 }
 
 if crouching == false{
+	var movement = ceil(walk_speed * power(global.water_movement_reduction, in_water))
     if keyboard_check(ord("A")){
-        if !place_meeting(x, y, o_water){
-            if !place_free(x, y + walk_speed + 1){
-                if place_free(x - walk_speed, y + walk_speed){ //45-degree slope down
-                    x -= walk_speed;
-                    y += walk_speed;
-                }
-                else if place_free(x - walk_speed, y + walk_speed / 2){ //30-degree slope down
-                    x -= walk_speed; 
-                    y += round(walk_speed / 2);
-                }
-                else if place_free(x - walk_speed, y){ //flat
-                    x -= walk_speed;
-                }
-                else if place_free(x - walk_speed, y - walk_speed / 2){ //30-degree slope up
-                    x -= walk_speed;
-                    y -= round(walk_speed / 2);
-                }
-                else if place_free(x - walk_speed, y - walk_speed){ //45-degree slope up
-                    x -= walk_speed;
-                    y -= walk_speed;
-                }
+        if state == "Ground"{
+            if place_free(x - movement, y + movement){ //45-degree slope down
+                x -= movement;
+                y += movement;
             }
-            else if place_free(x - walk_speed, y){   //though this seems unneeded, the player sometimes gets stuck if it is not there.
-                x -= walk_speed;
+            else if place_free(x - movement, y + movement / 2){ //30-degree slope down
+                x -= movement; 
+                y += movement / 2;
+            }
+            else if place_free(x - movement, y){ //flat
+                x -= movement;
+            }
+            else if place_free(x - movement, y - movement / 2){ //30-degree slope up
+                x -= movement;
+                y -= movement / 2;
+            }
+            else if place_free(x - movement, y - movement){ //45-degree slope up
+                x -= movement;
+                y -= movement;
             }
         }
-        else if place_meeting(x, y, o_water){
-            if !place_free(x, y + walk_speed * (5 / 8) + 1){
-                if place_free(x - walk_speed * (5 / 8), y + walk_speed * (5 / 8)){ //45-degree slope down
-                    x -= walk_speed * (5 / 8);
-                    y += walk_speed * (5 / 8);
-                }
-                else if place_free(x - walk_speed * (5 / 8), y + (walk_speed * (5 / 8)) / 2){ //30-degree slope down
-                    x -= walk_speed * (5 / 8);
-                    y += (walk_speed * (5 / 8)) / 2;
-                }
-                else if place_free(x - walk_speed * (5 / 8), y){ //flat
-                    x -= walk_speed * (5 / 8);
-                }
-                else if place_free(x - walk_speed * (5 / 8), y - (walk_speed * (5 / 8)) / 2){ //30-degree slope up
-                    x -= walk_speed * (5 / 8);
-                    y -= (walk_speed * (5 / 8)) / 2;
-                }
-                else if place_free(x - walk_speed * (5 / 8), y - walk_speed * (5 / 8)){ //45-degree slope up
-                    x -= walk_speed * (5 / 8);
-                    y -= walk_speed * (5 / 8);
-                }
-            }
-            else if place_free(x - walk_speed * (5 / 8), y){   //though this seems unneeded, the player sometimes gets stuck if it is not there.
-                x -= walk_speed * (5 / 8);
-            }
+        else if place_free(x - movement, y) and state == "Air"{
+            x -= movement; // Movement while not on ground
         }
+		else{
+			
+		}
     }
     else if keyboard_check(ord("D")){
-        if !place_meeting(x, y, o_water){
-            if !place_free(x, y + walk_speed + 1){
-                if place_free(x + walk_speed, y + walk_speed){ //45-degree slope down
-                    x += walk_speed;
-                    y += walk_speed;
-                }
-                else if place_free(x + walk_speed, y + walk_speed / 2){ //30-degree slope down
-                    x += walk_speed; 
-                    y += round(walk_speed / 2);
-                }
-                else if place_free(x + walk_speed, y){ //flat
-                    x += walk_speed;
-                }
-                else if place_free(x + walk_speed, y - walk_speed / 2){ //30-degree slope up
-                    x += walk_speed;
-                    y -= round(walk_speed / 2);
-                }
-                else if place_free(x + walk_speed, y - walk_speed){ //45-degree slope up
-                    x += walk_speed;
-                    y -= walk_speed;
-                }
+        if state == "Ground"{
+            if place_free(x + movement, y + movement){ //45-degree slope down
+                x += movement;
+                y += movement;
             }
-            else if place_free(x + walk_speed, y){   //though this seems unneeded, the player sometimes gets stuck if it is not there.
-                x += walk_speed;
+            else if place_free(x + movement, y + ceil(movement / 2)){ //30-degree slope down
+                x += movement; 
+                y += ceil(movement / 2);
+            }
+            else if place_free(x + movement, y){ //flat
+                x += movement;
+            }
+            else if place_free(x + movement, y - ceil(movement / 2)){ //30-degree slope up
+                x += movement;
+                y -= ceil(movement / 2);
+            }
+            else if place_free(x + movement, y - movement){ //45-degree slope up
+                x += movement;
+                y -= movement;
             }
         }
-        else if place_meeting(x, y, o_water){
-            if !place_free(x, y + walk_speed * (5 / 8) + 1){
-                if place_free(x + walk_speed * (5 / 8), y + walk_speed * (5 / 8)){ //45-degree slope down
-                    x += walk_speed * (5 / 8);
-                    y += walk_speed * (5 / 8);
-                }
-                else if place_free(x + walk_speed * (5 / 8), y + (walk_speed * (5 / 8)) / 2){ //30-degree slope down
-                    x += walk_speed * (5 / 8);
-                    y += (walk_speed * (5 / 8)) / 2;
-                }
-                else if place_free(x + walk_speed * (5 / 8), y){ //flat
-                    x += walk_speed * (5 / 8);
-                }
-                else if place_free(x + walk_speed * (5 / 8), y - (walk_speed * (5 / 8)) / 2){ //30-degree slope up
-                    x += walk_speed * (5 / 8);
-                    y -= (walk_speed * (5 / 8)) / 2;
-                }
-                else if place_free(x + walk_speed * (5 / 8), y - walk_speed * (5 / 8)){ //45-degree slope up
-                    x += walk_speed * (5 / 8);
-                    y -= walk_speed * (5 / 8);
-                }
-            }
-            else if place_free(x + walk_speed * (5 / 8), y){   //though this seems unneeded, the player sometimes gets stuck if it is not there.
-                x += walk_speed * (5 / 8);
-            }
+        else if place_free(x + movement, y) and state == "Air"{ // Movement while not on ground
+            x += movement;
         }
     }
 }
@@ -245,4 +197,3 @@ if shield > shield_max{
 if shield < 0{
     shield = 0;
 }
-

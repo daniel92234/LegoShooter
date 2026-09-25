@@ -9,7 +9,7 @@ var _down = _up + camera_get_view_height(_cam) + 40;
 if (point_in_rectangle(x, y, _left, _up, _right, _down)){
     inView = true;
 }
-if inView == true{
+if inView == true and instance_exists(o_player){
     if can_bomb == true{
         alarm[0] = fire_rate;
         bomb = instance_create_layer(bomb_x_offset, bomb_y_offset, "Game_Objects", o_robot_bomb);
