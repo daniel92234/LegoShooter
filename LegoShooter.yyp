@@ -356,6 +356,7 @@
     {"id":{"name":"o_trampoline","path":"objects/o_trampoline/o_trampoline.yy",},},
     {"id":{"name":"o_trash_green","path":"objects/o_trash_green/o_trash_green.yy",},},
     {"id":{"name":"o_trash_grey","path":"objects/o_trash_grey/o_trash_grey.yy",},},
+    {"id":{"name":"o_unarmed","path":"objects/o_unarmed/o_unarmed.yy",},},
     {"id":{"name":"o_up_blue","path":"objects/o_up_blue/o_up_blue.yy",},},
     {"id":{"name":"o_up_green","path":"objects/o_up_green/o_up_green.yy",},},
     {"id":{"name":"o_up_red","path":"objects/o_up_red/o_up_red.yy",},},

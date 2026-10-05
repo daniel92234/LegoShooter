@@ -177,32 +177,18 @@ if instance_exists(o_player) {
             }
         }
     }
-    if (weapon1.slot = 1) { //slot 0
-        if (weapon1.state = "Active") { //primary weapon
-        draw_sprite_ext(weapon1.ground_spr,0,300,16,1,1,0,image_blend,1);
-        } else if (weapon1.state = "Inactive") { //secondary weapon
-        draw_sprite_ext(weapon1.ground_spr,0,300,16,0.7,0.7,0,image_blend,0.7);
-        }
-    } else if (weapon1.slot = 2) { //slot 0
-        if (weapon1.state = "Active") { //primary weapon
-        draw_sprite_ext(weapon1.ground_spr,0,350,16,1,1,0,image_blend,1);
-        } else if (weapon1.state = "Inactive") { //secondary weapon
-        draw_sprite_ext(weapon1.ground_spr,0,350,16,0.7,0.7,0,image_blend,0.7);
-        }
-    }
-    
-    if (weapon2.slot = 1) { //slot 0
-        if (weapon2.state = "Active") { //primary weapon
-        draw_sprite_ext(weapon2.ground_spr,0,300,16,1,1,0,image_blend,1);
-        } else if (weapon2.state = "Inactive") { //secondary weapon
-        draw_sprite_ext(weapon2.ground_spr,0,300,16,0.7,0.7,0,image_blend,0.7);
-        }
-    } else if (weapon2.slot = 2) { //slot 0
-        if (weapon2.state = "Active") { //primary weapon
-        draw_sprite_ext(weapon2.ground_spr,0,350,16,1,1,0,image_blend,1);
-        } else if (weapon2.state = "Inactive") { //secondary weapon
-        draw_sprite_ext(weapon2.ground_spr,0,350,16,0.7,0.7,0,image_blend,0.7);
-        }
-    }
+    // weapon 1
+	if weapon1 != noone{
+		var weapon1_x = weapon1.slot == 1 ? 300 : 350;
+		var weapon1_scale = (weapon1.state == "Active") ? 1 : 0.7;
+		draw_sprite_ext(weapon1.ground_spr,0,weapon1_x,16,weapon1_scale,weapon1_scale,0,image_blend,weapon1_scale);
+	}
+
+	// weapon 2
+	if weapon2 != noone{
+		var weapon2_x = weapon2.slot == 1 ? 300 : 350;
+		var weapon2_scale = (weapon2.state == "Active") ? 1 : 0.7;
+		draw_sprite_ext(weapon2.ground_spr,0,weapon2_x,16,weapon2_scale,weapon2_scale,0,image_blend,weapon2_scale);
+	}
 }
 

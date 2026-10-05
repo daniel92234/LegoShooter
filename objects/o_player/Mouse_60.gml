@@ -1,7 +1,13 @@
 if slot == 1{
+	if gun_slot_2 == noone{
+		exit;
+	}
     slot = 2;
 }
 else if slot == 2{
+	if gun_slot_1 == noone{
+		exit;
+	}
     slot = 1;
 }
 with gun_slot_1{

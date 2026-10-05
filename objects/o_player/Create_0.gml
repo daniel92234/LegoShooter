@@ -1,6 +1,6 @@
 player = "Player"
-gun_1 = choose(o_gun_1, o_gun_3)
-gun_2 = choose(o_gun_2, o_gun_7)
+gun_1 = o_gun_1
+gun_2 = noone
 //main variables
 hp_max = 100; //health.
 hp = hp_max;
@@ -29,21 +29,31 @@ change = 0
 state = "Air"
 in_water = false
 
-with instance_create_layer(x,y,"Game_Objects", gun_1){ //create gun in our hands
-    o_player.gun_slot_1 = id;
-    slot = 1;
-    state = "Active";
-    sprite_index = gun_spr;
-    hurt_col = c_white;
+if gun_1 != noone{
+	with instance_create_layer(x,y,"Game_Objects", gun_1){ //create gun in our hands
+	    o_player.gun_slot_1 = id;
+	    slot = 1;
+	    state = "Active";
+	    sprite_index = gun_spr;
+	    hurt_col = c_white;
+	}
 }
 
-with instance_create_layer(x,y,"Game_Objects", gun_2){ //create gun in our hands
-    o_player.gun_slot_2 = id;
-    slot = 2;
-    state = "Inactive";
-    sprite_index = gun_spr;
-    hurt_col = c_white;
+if gun_2 != noone{
+	with instance_create_layer(x,y,"Game_Objects", gun_2){ //create gun in our hands
+	    o_player.gun_slot_2 = id;
+	    slot = 2;
+		if other.gun_1 != noone{
+			state = "Inactive";
+		}
+		else{
+			state = "Active";
+		}
+	    sprite_index = gun_spr;
+	    hurt_col = c_white;
+	}
 }
+
 //other stuff
 my_head = instance_create_layer(x, y - 13, "Game_Objects", o_head)
 with my_head{
