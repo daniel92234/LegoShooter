@@ -26,6 +26,7 @@ can_hit = true
 
 lost = 0
 change = 0
+can_pickup = false
 state = "Air"
 in_water = false
 

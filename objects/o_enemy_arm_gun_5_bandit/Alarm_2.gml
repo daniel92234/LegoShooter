@@ -29,6 +29,6 @@ if instance_exists(o_player){
     }
     effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup,bullet_x_offset,bullet_y_offset,0,c_ltgray);
     image_speed = 0.35;
-    alarm[3] = 30;
+    alarm[3] = 12/image_speed;
 }
 

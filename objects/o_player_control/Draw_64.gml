@@ -39,7 +39,7 @@ if instance_exists(o_player) {
     if global.key = true {
         draw_sprite(s_key,0,190,16)
     }
-    if instance_exists(weapon_ground){
+    if instance_exists(weapon_ground) and o_player.can_pickup{
         draw_set_alpha(1);
 		if instance_exists(o_bkg_lighting)
 			draw_set_color(c_white);

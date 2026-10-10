@@ -5,7 +5,7 @@ collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,o_hitP,false,true)
     if (reload_state == "Ready" or reload_state == "Reloading") and ammo > 0{
 		if (reload_state == "Reloading"){
 			alarm[0] = -1
-			sprite = gun_spr
+			sprite_index = gun_spr
 		}
         flash = instance_create_layer(flash_x_offset,flash_y_offset,"Game_Objects",o_flash);
         with flash{
@@ -37,8 +37,8 @@ collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,o_hitP,false,true)
         }
         effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup,bullet_x_offset,bullet_y_offset,0,c_ltgray);
         reload_state = "Rest";
-        image_speed = 0.35;
-        alarm[1] = 30;
+        image_speed = sprite_get_number(sprite_index) / fire_rate;
+        alarm[1] = 12/image_speed;
         alarm[2] = fire_rate;
         ammo -= 1;
     }

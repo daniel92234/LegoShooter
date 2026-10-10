@@ -64,7 +64,7 @@ else{
     }
 }
 if !place_meeting(x, y, o_gunP){
-    gun_ground = false;
+    gun_ground = noone;
 }
 if keyboard_check(ord("S")){
     crouching = true;
