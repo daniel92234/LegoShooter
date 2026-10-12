@@ -44,10 +44,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
-  "spriteMaskId":{
+  "spriteId":{
     "name":"s_bullet_A_8",
     "path":"sprites/s_bullet_A_8/s_bullet_A_8.yy",
   },
+  "spriteMaskId":null,
   "visible":false,
 }

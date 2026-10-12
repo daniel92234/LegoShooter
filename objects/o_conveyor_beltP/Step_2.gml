@@ -1,5 +1,5 @@
-var _list = ds_list_create();
-var _num = collision_rectangle_list(
+var list = ds_list_create();
+var num = collision_rectangle_list(
     bbox_left,
     bbox_top,
     bbox_right,
@@ -18,36 +18,39 @@ var _num = collision_rectangle_list(
 	],
     false,
     true,
-    _list,
+    list,
     false
 );
-for (var i = 0; i < _num; ++i){
-    var _target = _list[| i];
-    var _target_center = (_target.bbox_left + _target.bbox_right) * 0.5;
-    if (_target_center >= bbox_left and _target_center < bbox_right){
-        var _spd = cspeed;
-        with (_target){
-            if (!variable_instance_exists(id, "__conveyor_fraction")){
-                __conveyor_fraction = 0;
+for (var i = 0; i < num; ++i){
+    var target = list[| i];
+	if object_get_parent(target.object_index) == o_studP and !target.gravity_bound {
+		continue;
+	}
+    var target_center = (target.bbox_left + target.bbox_right) * 0.5;
+    if target_center >= bbox_left and target_center < bbox_right{
+        var spd = cspeed;
+        with target{
+            if !variable_instance_exists(id, "conveyor_fraction"){
+                conveyor_fraction = 0;
             }
-            if (__conveyor_fraction != 0 and sign(__conveyor_fraction) != sign(_spd)){
-                __conveyor_fraction = 0;
+            if conveyor_fraction != 0 and sign(conveyor_fraction) != sign(spd){
+                conveyor_fraction = 0;
             }
-            __conveyor_fraction += _spd;
+            conveyor_fraction += spd;
 
-            var _move = sign(__conveyor_fraction) * floor(abs(__conveyor_fraction));
+            var move = sign(conveyor_fraction) * floor(abs(conveyor_fraction));
 
-            if (_move != 0){
-                __conveyor_fraction -= _move;
-                if (_move > 0){
-                    move_contact_solid(0, _move);
+            if move != 0{
+                conveyor_fraction -= move;
+                if move > 0{
+                    move_contact_solid(0, move);
                 }
                 else{
-                    move_contact_solid(180, abs(_move));
+                    move_contact_solid(180, abs(move));
                 }
             }
         }
     }
 }
 
-ds_list_destroy(_list);
+ds_list_destroy(list);

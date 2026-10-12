@@ -1,3 +1,4 @@
+player = "Neutral";
 depth = layer_get_depth("Game_Objects") + DEPTH_OFFSET_WATER;
 image_speed = 0.1;
 if !(place_meeting(x, y - 1, o_lava) or
