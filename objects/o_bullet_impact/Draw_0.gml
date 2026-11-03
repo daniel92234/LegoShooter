@@ -1,10 +1,14 @@
-if part_system_exists(ps){
-	if (instance_exists(o_bkg_lighting)) and light = true{
-	    o_bkg_lighting.beginEmissive();
-	    part_system_drawit(ps);
-	    o_bkg_lighting.endEmissive();
+if (part_system_exists(ps)){
+	part_system_depth(ps, depth);
+	part_system_position(ps, x, y);
+	part_system_colour(ps, color, 1);
+    if instance_exists(o_bkg_lighting) and light{
+		shader_set_uniform_f(o_bkg_lighting.u_emissive, 1.0);
 	}
-	else{
-		part_system_drawit(ps);
+
+	part_system_drawit(ps);
+
+	if instance_exists(o_bkg_lighting) and light{
+		shader_set_uniform_f(o_bkg_lighting.u_emissive, 0.0);
 	}
 }

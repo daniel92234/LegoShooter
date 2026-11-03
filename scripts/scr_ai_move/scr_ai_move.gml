@@ -1,44 +1,44 @@
 function scr_ai_move() {
 	if instance_exists(o_player){
 		
-		var _facing = 0
+		var facing = 0
 		if o_player.x < x
-			_facing = -1
+			facing = -1
 		else if o_player.x > x
-			_facing = 1
+			facing = 1
 		
 	    if !place_meeting(x, y, o_water){
-	        if (collision_line(x + (walk_speed + 7) * _facing, y + 10, x + (walk_speed + 7) * _facing, y + 300, o_blockP, false, true)
-			or collision_line(x + 35 * _facing, y, x + 35 * _facing, y + 300, o_blockP, false, true))
-			and !collision_line(x + (walk_speed + 7) * _facing, y, x + (walk_speed + 7) * _facing, y + 300, o_hazardP, false, true){
+	        if (collision_line(x + (walk_speed + 7) * facing, y + 10, x + (walk_speed + 7) * facing, y + 300, o_blockP, false, true)
+			or collision_line(x + 35 * facing, y, x + 35 * facing, y + 300, o_blockP, false, true))
+			and !collision_line(x + (walk_speed + 7) * facing, y, x + (walk_speed + 7) * facing, y + 300, o_hazardP, false, true){
 	            if !place_free(x, y + walk_speed + 1){
-	                if place_free(x + walk_speed * _facing, y + walk_speed){ //down a slope of 1
-	                    x += walk_speed * _facing;
+	                if place_free(x + walk_speed * facing, y + walk_speed){ //down a slope of 1
+	                    x += walk_speed * facing;
 	                    y += walk_speed;
 	                    image_speed = 0.25;
 	                }
-	                else if place_free(x + walk_speed * _facing, y + walk_speed / 2){ //down a slope of 1/2
-	                    x += walk_speed* _facing;
+	                else if place_free(x + walk_speed * facing, y + walk_speed / 2){ //down a slope of 1/2
+	                    x += walk_speed* facing;
 	                    y += walk_speed / 2; 
 	                    image_speed = 0.25;
 	                }
-	                else if place_free(x + walk_speed * _facing, y){ //forward
-	                    x += walk_speed* _facing;
+	                else if place_free(x + walk_speed * facing, y){ //forward
+	                    x += walk_speed* facing;
 	                    image_speed = 0.25;
 	                }
-	                else if place_free(x + walk_speed * _facing, y - walk_speed / 2){ //up a slope of 1
-	                    x += walk_speed* _facing;
+	                else if place_free(x + walk_speed * facing, y - walk_speed / 2){ //up a slope of 1
+	                    x += walk_speed* facing;
 	                    y -= walk_speed / 2; 
 	                    image_speed = 0.25;
 	                }
-	                else if place_free(x + walk_speed * _facing, y - walk_speed){ //up a slope of 1/2
-	                    x += walk_speed* _facing;
+	                else if place_free(x + walk_speed * facing, y - walk_speed){ //up a slope of 1/2
+	                    x += walk_speed* facing;
 	                    y -= walk_speed;
 	                    image_speed = 0.25;
 	                }
 	            }
-	            else if place_free(x + walk_speed * _facing, y){ // Movement while not on ground
-	                x += walk_speed * _facing;
+	            else if place_free(x + walk_speed * facing, y){ // Movement while not on ground
+	                x += walk_speed * facing;
 	            }
 	        }
 	        else{
@@ -46,12 +46,12 @@ function scr_ai_move() {
 	            image_speed = 0;
 	        }
 	        if can_jump == true and !place_free(x, y + 1){
-	            if !collision_line(x + (walk_speed + 7) * _facing, y + 10, x + (walk_speed + 7) * _facing, y + 300, o_blockP, false, true) and
-				collision_line(x + 35 * _facing, y, x + 35 * _facing, y + 300, o_blockP, false, true){
+	            if !collision_line(x + (walk_speed + 7) * facing, y + 10, x + (walk_speed + 7) * facing, y + 300, o_blockP, false, true) and
+				collision_line(x + 35 * facing, y, x + 35 * facing, y + 300, o_blockP, false, true){
 	                vspeed -= jump_power;
 	                can_jump = false;
 	            }
-	            if !place_free(x + walk_speed * _facing, y - 15) and place_free(x + walk_speed * _facing, y - 70){
+	            if !place_free(x + walk_speed * facing, y - 15) and place_free(x + walk_speed * facing, y - 70){
 	                vspeed -= jump_power;
 	                can_jump = false;
 	            }
@@ -59,27 +59,27 @@ function scr_ai_move() {
 	    }
 	    else{
 			var water_movement = ceil(walk_speed * global.water_movement_reduction)
-	        if place_free(x + water_movement * _facing, y + water_movement){ //down a slope of 1
-	            x += water_movement * _facing;
+	        if place_free(x + water_movement * facing, y + water_movement){ //down a slope of 1
+	            x += water_movement * facing;
 	            y += water_movement; 
 	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + water_movement * _facing, y + (water_movement) / 2){ //down a slope of 1/2
-	            x += water_movement * _facing;
+	        else if place_free(x + water_movement * facing, y + (water_movement) / 2){ //down a slope of 1/2
+	            x += water_movement * facing;
 	            y += (water_movement) / 2; 
 	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + water_movement * _facing, y){ //forward
-	            x += water_movement * _facing;
+	        else if place_free(x + water_movement * facing, y){ //forward
+	            x += water_movement * facing;
 	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + water_movement * _facing, y - (water_movement) / 2){ //up a slope of 1
-	            x += water_movement * _facing;
+	        else if place_free(x + water_movement * facing, y - (water_movement) / 2){ //up a slope of 1
+	            x += water_movement * facing;
 	            y -= (water_movement) / 2; 
 	            image_speed = 0.25 * global.water_movement_reduction;
 	        }
-	        else if place_free(x + water_movement * _facing, y - water_movement){ //up a slope of 1/2
-	            x += water_movement * _facing;
+	        else if place_free(x + water_movement * facing, y - water_movement){ //up a slope of 1/2
+	            x += water_movement * facing;
 	            y -= water_movement;
 	            image_speed = 0.25 * global.water_movement_reduction;
 	        }

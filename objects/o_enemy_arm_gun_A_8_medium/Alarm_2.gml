@@ -3,12 +3,7 @@ if instance_exists(o_player){
         with bullet{
             direction = other.image_angle;
             image_angle = direction;
-            alarm[0] = 1;
-            alarm[1] = 5;
-            first_instance = noone;
-            cx = x;
-            cy = y;
-            alpha = 0.8;
+            event_user(3);
             if o_player.facing == 1{
                 image_yscale = 1;
             }
@@ -19,4 +14,3 @@ if instance_exists(o_player){
         }
     image_speed = 1;
 }
-

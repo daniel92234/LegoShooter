@@ -8,6 +8,10 @@
   "name":"o_enemy_minor",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy_minifigP","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"propertyId":{"name":"max_hp","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"40",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy_minifigP","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"propertyId":{"name":"walk_towards_range","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"400",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy_minifigP","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"propertyId":{"name":"stand_range_min","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"180",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy_minifigP","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"propertyId":{"name":"walk_away_range_max","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"135",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"o_enemy_minifigP","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"propertyId":{"name":"walk_away_range_min","path":"objects/o_enemy_minifigP/o_enemy_minifigP.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"60",},
   ],
   "parent":{
     "name":"enemies",

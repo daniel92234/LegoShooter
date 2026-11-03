@@ -3,8 +3,6 @@
   "%Name":"o_crate_s_none",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"o_crate_s_none",
@@ -14,8 +12,8 @@
     "path":"folders/Objects/crates.yy",
   },
   "parentObjectId":{
-    "name":"o_crate_s",
-    "path":"objects/o_crate_s/o_crate_s.yy",
+    "name":"o_crate_sP",
+    "path":"objects/o_crate_sP/o_crate_sP.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

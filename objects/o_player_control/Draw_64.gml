@@ -15,11 +15,14 @@ if instance_exists(o_player) {
     draw_text(400,5,string_hash_to_newline(level));
     
     //draw health
-    health_bar = (o_player.hp / o_player.hp_max) * 100;
+    var health_bar = (o_player.hp / o_player.hp_max) * 100;
     draw_healthbar(502, 9, 762, 27, health_bar, c_black, c_red, c_green, 0, true, true);
+	var shield_bar
+	var over_shield_remain
+	var over_shield_bar
     if o_player.over_shield > 0{
         shield_bar = 100;
-        over_shield_remain = shield - 50;
+        over_shield_remain = o_player.shield - o_player.shield_max;
         over_shield_bar = (over_shield_remain / o_player.over_shield) * 100;
     }
     else{
@@ -51,13 +54,13 @@ if instance_exists(o_player) {
 				draw_set_color(c_lime);
 			else
 				draw_set_color(c_green);
-            draw_text(5,580,string_hash_to_newline(string(weapon_ground.per) + "% Charged"));
+            draw_text(5,580,string_hash_to_newline(string(round(weapon_ground.per)) + "% Charged"));
         }
         draw_set_alpha(1);
         draw_set_color(c_black);
     }
     if instance_exists(pickup_gun){
-        if dialouge[1] > 0{
+        if dialouge[1] > 0 and variable_instance_exists(o_player, "change"){
             dialouge[2] = 0
             dialouge[1]--;
             if dialouge[1] > 100{
@@ -69,19 +72,19 @@ if instance_exists(o_player) {
             if instance_exists(o_bkg_lighting)
 				draw_set_color(c_white);
 			else
-				draw_set_color(c_black);
-            if o_player.change == 1{
-                draw_text(48,80,string_hash_to_newline("Picked up " 
-                    + string(o_player.change) + " " 
-                    + string(pickup_gun.clip_name_single) + " for " 
-                    + string(pickup_gun.gun_name) + "."))
-            }
-            else{
-                draw_text(48,80,string_hash_to_newline("Picked up " 
-                    + string(o_player.change) + " " 
-                    + string(pickup_gun.clip_name) + " for " 
-                    + string(pickup_gun.gun_name) + "."))
-            }
+			draw_set_color(c_black);
+	        if o_player.change == 1{
+	            draw_text(48,80,string_hash_to_newline("Picked up " 
+	                + string(o_player.change) + " " 
+	                + string(pickup_gun.clip_name_single) + " for " 
+	                + string(pickup_gun.gun_name) + "."))
+	        }
+	        else{
+	            draw_text(48,80,string_hash_to_newline("Picked up " 
+	                + string(o_player.change) + " " 
+	                + string(pickup_gun.clip_name) + " for " 
+	                + string(pickup_gun.gun_name) + "."))
+			}
             draw_set_alpha(1);
             draw_set_color(c_black);
         }
@@ -90,7 +93,7 @@ if instance_exists(o_player) {
         if dialouge[2] > 0{
             dialouge[1] = 0
             dialouge[2]--;
-            if dialouge[2] > 100{
+            if dialouge[2] > 100 and variable_instance_exists(o_player, "change"){
                 draw_set_alpha(1);
             }
             else{

@@ -1,8 +1,9 @@
-if (instance_exists(o_bkg_lighting)){
-    o_bkg_lighting.beginEmissive()
-	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,image_angle,image_blend,image_alpha);
-	o_bkg_lighting.endEmissive();
+if instance_exists(o_bkg_lighting){
+	shader_set_uniform_f(o_bkg_lighting.u_emissive, 1.0);
 }
-else{
-	draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,image_angle,image_blend,image_alpha);
+
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,1,image_angle,image_blend,image_alpha);
+
+if instance_exists(o_bkg_lighting){
+	shader_set_uniform_f(o_bkg_lighting.u_emissive, 0.0);
 }

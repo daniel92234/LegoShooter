@@ -14,10 +14,10 @@ if (other.state == "Ground"){
     }
     if object_get_parent(gun_ground.object_index) != o_gun_energyP{
         var gun_slot = noone;
-        if gun_slot_1 != noone and gun_ground.object_index == gun_slot_1.object_index and gun_slot_1.state == "Active"{
+        if gun_slot_1 != noone and gun_ground.object_index == gun_slot_1.object_index{
             gun_slot = gun_slot_1;
         }
-        else if gun_slot_2 != noone and gun_ground.object_index == gun_slot_2.object_index and gun_slot_2.state == "Active"{
+        else if gun_slot_2 != noone and gun_ground.object_index == gun_slot_2.object_index{
             gun_slot = gun_slot_2;
         }
         if gun_slot != noone and gun_slot.total_ammo < gun_slot.ammo_max and (gun_ground.total_ammo > 0 or gun_ground.ammo > 0){

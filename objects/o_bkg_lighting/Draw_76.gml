@@ -1,10 +1,28 @@
-var _width = surface_get_width(application_surface);
-var _height = surface_get_height(application_surface);
+renderer.Update();
 
-if (!surface_exists(emissive_surface)){
-    emissive_surface = surface_create(_width, _height);
-}
+var camera = view_camera[0];
+var lightSurface = renderer.GetLightSurface();
 
-surface_set_target(emissive_surface);
-draw_clear_alpha(c_black, 0);
-surface_reset_target();
+gpu_set_ztestenable(false);
+
+shader_set(sh_emissive);
+
+texture_set_stage(
+    u_lightMap,
+    surface_get_texture(lightSurface)
+);
+
+shader_set_uniform_f(
+    u_viewRect,
+    camera_get_view_x(camera),
+    camera_get_view_y(camera),
+    camera_get_view_width(camera),
+    camera_get_view_height(camera)
+);
+
+shader_set_uniform_f(
+    u_exposure,
+    renderer.exposure
+);
+
+shader_set_uniform_f(u_emissive, 0.0);

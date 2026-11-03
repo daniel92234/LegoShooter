@@ -1,8 +1,9 @@
-if (instance_exists(o_bkg_lighting)){
-    o_bkg_lighting.beginEmissive()
-    draw_self();
-    o_bkg_lighting.endEmissive();
+if instance_exists(o_bkg_lighting){
+	shader_set_uniform_f(o_bkg_lighting.u_emissive, 1.0);
 }
-else{
-	draw_self();
+
+draw_self();
+
+if instance_exists(o_bkg_lighting){
+	shader_set_uniform_f(o_bkg_lighting.u_emissive, 0.0);
 }

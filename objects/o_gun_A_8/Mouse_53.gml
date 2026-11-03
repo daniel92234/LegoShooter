@@ -3,14 +3,25 @@ if state == "Active" and hit == false and
 collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,o_hitP,false,true).solid == false{
 //shooting
     if reload_state == "Ready" and ammo > 0{
+		flash = instance_create_layer(flash_x_offset,flash_y_offset,"Game_Objects",o_flash);
+        with flash{
+            sprite_index = s_flash_A_8;
+            image_speed = 0.4;
+            image_angle = other.image_angle;
+            if o_player.facing == 1{
+                image_yscale = 1;
+            }
+            else if o_player.facing == -1{
+                image_yscale = -1;
+            }
+            owner = other.id;
+			light = true;
+        }
         bullet = instance_create_layer(bullet_x_offset, bullet_y_offset, "Game_Objects", o_bullet_A_8);
         with bullet{
             direction = other.image_angle;
             image_angle = direction;
-            alarm[0] = 1;
-            first_instance = noone;
-            cx = x;
-            cy = y;
+            event_user(3);
             if o_player.facing == 1{
                 image_yscale = 1;
             }

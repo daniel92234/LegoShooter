@@ -10,4 +10,5 @@ gun_shortname = "Laser Pistol";
 
 bullet_x_real = 61;
 bullet_y_real = -5;
-
+flash_x_real = 61;
+flash_y_real = -5;

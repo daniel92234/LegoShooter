@@ -4,7 +4,8 @@ gun_2 = noone
 //main variables
 hp_max = 100; //health.
 hp = hp_max;
-shield = 50;
+shield_max = 50;
+shield = shield_max;
 facing = 1; //facing left or right
 dir3 = 1; //direction of head
 grenades = 2; //grenades 
@@ -24,8 +25,6 @@ slot = 1; //which gun we are holding (gun_slot_1 or gun_slot_2)
 add_shield_point = true
 can_hit = true
 
-lost = 0
-change = 0
 can_pickup = false
 state = "Air"
 in_water = false

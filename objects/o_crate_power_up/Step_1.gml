@@ -1,6 +1,6 @@
 if (hp <= 0) {
 	scr_create_splinter(x, y, splinter_object, destroy_number_of_splinters);
-    choice = choose(1,2,3,4)
+    var choice = choose(1,2,3,4)
     if choice == 1{
         instance_create_layer(x,y,"Game_Objects",o_walk_up);
     }

@@ -1,21 +1,34 @@
 //move around
 if instance_exists(o_player){
 	if equip2 == "None" or equip2 == "Shield"{
-		var _walking = false
+		var walking = false;
+		var distance_to_player = distance_to_object(o_player);
 	    if guard == false and alert == true{
-	        if distance_to_object(o_player) > walk_away_range + 5 and distance_to_object(o_player) < view_range{
-				_walking = true
+	        if distance_to_player > stand_range and distance_to_player <= walk_towards_range{
+				walking = true;
 	            scr_ai_move();
+				if distance_to_player > stand_range_max and randomize_stand_range{
+					randomize_stand_range = false;
+					stand_range = random_range(stand_range_min, stand_range_max);
+				}
 	        }
-	        else if distance_to_object(o_player) < walk_away_range - 5{
-				_walking = true
+			else if distance_to_player <= walk_away_range{
+				walking = true;
 	            scr_ai_away();
+				randomize_walk_away_range = true;
 	        }
 	        else{
+				if distance_to_player <= stand_range_max and !randomize_stand_range{
+					randomize_stand_range = true;
+				}
+				if distance_to_player > walk_away_range_max and randomize_walk_away_range{
+					randomize_walk_away_range = false;
+					walk_away_range = random_range(walk_away_range_min, walk_away_range_max);
+				}
 	            hspeed = 0;
 	            sprite_index = asset_get_index("s_enemy_stand_" + enemy_type);
 				if can_swim == true and place_meeting(x, y, o_water){
-					if distance_to_object(o_player) >= walk_away_range - 5 and distance_to_object(o_player) <= walk_away_range + 5{
+					if distance_to_player >= walk_away_range and distance_to_player <= walk_away_range{
 						if o_player.y < y - 3 or
 						(collision_line(x, y, x, y + 150, o_hazardP, false, true) or
 						!collision_line(x, y, x, y + 500, o_blockP, false, true)){
@@ -67,7 +80,7 @@ if instance_exists(o_player){
 	    }
 	    else{
 	        gravity = 0;
-			if !_walking{
+			if !walking{
 				sprite_index = asset_get_index("s_enemy_stand_" + enemy_type);
 			}
 			else{
@@ -79,14 +92,6 @@ if instance_exists(o_player){
 	        image_speed = 0; 
 	        image_index = 0; 
 	        sprite_index = asset_get_index("s_enemy_stand_" + enemy_type);
-	    }
-	    with my_arm{
-	        x = other.x;
-	        y = other.y;
-	    }
-	    with my_other_arm{
-	        x = other.x; 
-	        y = other.y;
 	    }
 	}
 	if equip2 == "Jetpack"{
@@ -121,14 +126,6 @@ if instance_exists(o_player){
 	            gravity = 0;
 	        }
 	        sprite_index = asset_get_index("s_enemy_stand_jetpack_" + enemy_type);
-	    }
-	    with my_arm{
-	        x = other.x; 
-	        y = other.y;
-	    }
-	    with my_other_arm{
-	        x = other.x; 
-	        y = other.y;
 	    }
 	}
 }

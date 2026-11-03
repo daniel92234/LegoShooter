@@ -1,7 +1,7 @@
-function scr_ai_block_collision() {
+function scr_ai_block_collision(){
 	if other.solid == true{
 	    if vspeed > 0{
-	        move_contact_all(270, 12);
+	        move_contact_solid(270, 12);
 	        vspeed = 0;
 	    } 
 	    else if vspeed < 0{
@@ -10,7 +10,4 @@ function scr_ai_block_collision() {
 	    motion_set(0, 0);
 	    can_jump = true;
 	}
-
-
-
 }

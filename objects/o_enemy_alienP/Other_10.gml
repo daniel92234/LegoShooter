@@ -1,4 +1,6 @@
 event_inherited();
 if damage > 0{
-	effect_create_depth(layer_get_depth("Game_Objects") + DEPTH_OFFSET_EFFECTS, ef_smokeup, x + random_range(-4, 4), y + random_range(-4, 4), random_range(0, 0.5), c_lime);
+	with instance_create_layer(x+random_range(-4,4),y+random_range(-4,4),"Game_Objects",o_bullet_impact) {
+		particles = p_alien_blood;
+	}
 }

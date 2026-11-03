@@ -12,7 +12,7 @@ function scr_explosion_damage(argument0,argument1){
 		var distance = distance_to_point(other.x,other.y);
 		if distance <= explosion_radius{
 			damage = other.damage_max-(other.damage_max-other.damage_min)*clamp((distance-0.2*explosion_radius)/(0.8*explosion_radius),0,1);
-			damage = ceil(damage*random_range(1-other.random_factor,1+other.random_factor))
+			damage = ceil(random_range(max(other.damage_min, damage*(1-other.random_factor)),min(other.damage_max, damage*(1+other.random_factor))));
 			if argument1{
 				motion_add(
 					point_direction(x,y,other.x,other.y)+180,
