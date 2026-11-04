@@ -6,7 +6,7 @@ if damage > 0{
 	        _hit_x = hit.cx;
 	        _hit_y = hit.cy;
 	    }
-	    scr_create_splinter(_hit_x, _hit_y, splinter_object, hit_number_of_splinters);
+	    scr_create_splinter(_hit_x, _hit_y, splinter_sprite, hit_number_of_splinters);
 	}
     hp -= damage;
 }

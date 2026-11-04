@@ -1,2 +1,2 @@
 event_inherited();
-splinter_object = o_splinter_light_grey;
+splinter_sprite = s_crate_splinter_light_grey;

@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"o_splinter",
+  "%Name":"o_crate_splinter",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"o_blockP","path":"objects/o_blockP/o_blockP.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -9,7 +9,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"o_exp","path":"objects/o_exp/o_exp.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_splinter",
+  "name":"o_crate_splinter",
   "overriddenProperties":[],
   "parent":{
     "name":"don't place",

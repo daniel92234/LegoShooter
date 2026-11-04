@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_lava",
-    "path":"sprites/s_lava/s_lava.yy",
+    "name":"s_lava_quarter",
+    "path":"sprites/s_lava_quarter/s_lava_quarter.yy",
   },
   "spriteMaskId":null,
   "visible":true,
